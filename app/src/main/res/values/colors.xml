@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ch_black_alpha_128">#80000000</color>
+    <color name="ch_black_alpha_111">#881A212A</color>
+    <color name="ch_black_alpha_title">#FF202020</color>
+    <color name="ch_white">#ffffff</color>
+    <color name="ch_black">#FF151515</color>
+    <color name="ch_gray_black">#525252</color>
+    <color name="ch_gray">#f4f4f4</color>
+    <color name="ch_text_hint">#999999</color>
+    <color name="ch_green">#00CC00</color>
+    <color name="ch_green_p">#ade3be</color>
+    <color name="ch_transparent">#00000000</color>
+    <color name="ch_translucent">#A0000000</color>
+    <color name="main_green">#24cf5f</color>
+    <color name="ch_common_bg">#103637</color>
+    <color name="ch_common_hint">#999999</color>
+    <color name="ch_red_text">#DC143C</color>
+    <color name="ch_bule_text">#19978F</color>
+    <color name="ch_pop_gift_bg">#535353</color>
+    <color name="ch_pop_sub_hot_bg">#aa000000</color>
+    <color name="ch_pop_sub_hot_text_shape_n">#FFFDF601</color>
+    <color name="ch_pop_sub_hot_text_shape_p">#7c7803</color>
+    <color name="ch_pop_sub_hot_text_shape_stroke_n">#f00</color>
+    <color name="ch_pop_sub_hot_text_shape_stroke_p">#910101</color>
+    <color name="ch_color_white">#FFFFFF</color>
+
+    <color name="ch_color_download_normal_title">#34cf4d</color>
+    <color name="ch_color_download_downloading">#77cf00</color>
+    <color name="ch_color_download_pause">#f77855</color>
+    <color name="ch_color_download_pause_p">#f7a28b</color>
+    <color name="ch_color_download_stop">#b9ce45</color>
+    <color name="ch_color_download_open">#ffc655</color>
+    <color name="ch_color_download_error">#e2e5ea</color>
+    <color name="ch_sub_activity_pop">#FF229A4B</color>
+    <color name="ch_color_login_bg">#103637</color>
+    <color name="ch_color_change_bg">#FF3C5B5C</color>
+    <color name="ch_color_search_bg">#EEEFF3</color>
+    <color name="ch_home_bottom_color">#f5f5f5</color>
+    <color name="ch_usercenter_official_bg_color">#FF529FFC</color>
+    <color name="ch_task_get_error">#d0d0d0</color>
+    <color name="ch_bbs_purple">#c905da</color>
+    <color name="ch_usercenter_level_bg">#F98700</color>
+    <color name="ch_task_purple">#FF9A5CF4</color>
+
+    <color name="ch_coupon_green_n">#FF23C359</color>
+    <color name="ch_coupon_progress_bg">#FFD2D2D2</color>
+    <color name="ch_coupon_number_text_color">#fffe9222</color>
+    <color name="ch_coupon_number_text_bg">#ffe9d2</color>
+    <color name="ch_coupon_list_bg">#f0f2f5</color>
+
+    <color name="ch_title_start_color">#FF3DDC64</color>
+    <color name="ch_title_end_color">#FF00C4EE</color>
+    <color name="ch_title_start_color_p">#883DDC64</color>
+    <color name="ch_title_end_color_p">#8800C4EE</color>
+    <color name="ch_title_bg_color">#22696A6B</color>
+    <color name="ch_prefecture_title_color">#FF282828</color>
+    <color name="ch_account_black_alpha">#441A212A</color>
+    <color name="ch_flying_black">#88000000</color>
+
+    <color name="ch_vip_dot_p_color">#FFA8A9AB</color>
+    <color name="ch_vip_dot_n_color">#FFF3F3F3</color>
+    <color name="ch_vip_draw_btn_color">#FFDDC088</color>
+    <color name="ch_vip_draw_btn_color_p">#88faa80a</color>
+    <color name="ch_vip_view_pager_btn_color_p">#66DDC088</color>
+    <color name="ch_vip_view_pager_submit_color_l">#f5d893</color>
+    <color name="ch_vip_view_pager_submit_color_r">#d7a44d</color>
+    <color name="ch_vip_view_pager_submit_color_l_p">#88f5d893</color>
+    <color name="ch_vip_view_pager_submit_color_r_p">#88d7a44d</color>
+    <color name="ch_vip_view_pager_title_bg">#FF1F2021</color>
+    <color name="ch_vip_view_certification_dialog_bg">#FF232325</color>
+    <color name="ch_vip_platform_item_color">#FFF4EBDA</color>
+    <color name="ch_vip_certification_vip_text_color">#FFF5D25A</color>
+    <color name="ch_vip_rebate_btn_color">#FF777676</color>
+</resources>

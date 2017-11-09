@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+    <ShareSDK
+        AppKey = "1a4014399f420"/>
+    
+    <SinaWeibo
+        Id="1"
+        SortId="1"
+        AppKey="1430857732"
+        AppSecret="8e67115fb574c6ccded07a7d5b866091"
+        RedirectUrl="http://www.caohua.com"
+        ShareByAppClient="true"
+        Enable="true" />
+
+
+
+    <QZone
+        Id="3"
+        SortId="3"
+        AppId="1105136411"
+        AppKey="aed9b0303e3ed1e27bae87c33761161d"
+        Enable="true" />
+
+    <Wechat
+        Id="4"
+        SortId="4"
+        AppId="wxa975af1694a43686"
+        AppSecret="a1a8375d82a46934c953d2c22a54bdc6"
+        BypassApproval="false"
+        Enable="true" />
+    
+    <WechatMoments
+        Id="5"
+        SortId="5"
+        AppId="wxa975af1694a43686"
+        AppSecret="a1a8375d82a46934c953d2c22a54bdc6"
+        BypassApproval="false"
+        Enable="true" />
+        
+	<WechatFavorite
+        Id="6"
+        SortId="6"
+        AppId="wx4868b35061f87885"
+        AppSecret="64020361b8ec4c99936c0e3999a9f249"
+        Enable="true" />
+    
+	<!-- ShareByAppClient标识是否使用微博客户端分享，默认是false -->
+	<QQ
+        Id="7"
+        SortId="7"
+        AppId="1105136411"
+        AppKey="aed9b0303e3ed1e27bae87c33761161d"
+        ShareByAppClient="true"
+        Enable="true" />
+
+</DevInfor>

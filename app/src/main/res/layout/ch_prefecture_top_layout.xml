@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_stickynavlayout_topview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ch_white">
+
+    <ImageView
+        android:id="@+id/ch_prefecture_top_cover_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ch_prefecture_center_ll"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ch_prefecture_top_center_game_icon"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ch_prefecture_top_center_game_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:text="无敌大航海"
+                    android:textColor="@color/ch_black"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/ch_prefecture_change_game"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ch_prefecture_change_game_bg_1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="2dp"
+                        android:tint="@color/ch_green"
+                        android:src="@drawable/ch_prefecture_change_game_left_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="切换游戏"
+                        android:textColor="@color/ch_black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/ch_gray" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ch_prefecture_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/ch_gray" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ch_prefecture_msg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ch_prefecture_message_right_icon" />
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:id="@+id/ch_dialog_safe_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="绑定手机"
+        android:textColor="@color/ch_black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/ch_dialog_safe_phonebound"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical|right"
+        android:paddingRight="10dp"
+        android:text="未绑定"
+        android:textColor="@color/ch_red_text" />
+
+    <ImageView
+        android:gravity="center_vertical"
+        android:id="@+id/ch_dialog_safe_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ch_common_title_more" />
+</merge>

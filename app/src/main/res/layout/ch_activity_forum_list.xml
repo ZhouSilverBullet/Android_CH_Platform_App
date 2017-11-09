@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:id="@+id/ch_activity_forum_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sub_activity_title_des="论坛中心" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/ch_activity_forum_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_forum_sub_title">
+
+        <com.caohua.games.ui.widget.refresh.CHRadarHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/ch_activity_forum_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/ch_gray"
+            android:dividerHeight="1dp" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_activity_forum_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_forum_sub_title"
+        android:clickable="true" />
+
+    <com.caohua.games.ui.widget.NoNetworkView
+        android:id="@+id/ch_activity_forum_no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_forum_sub_title" />
+
+    <LinearLayout
+        android:id="@+id/ch_forum_list_download_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_forum_sub_title"
+        android:background="@color/ch_white"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/ch_forum_list_progress_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminateDrawable="@anim/ch_anim_rotate_cycle"
+            android:indeterminateDuration="1000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="加载中..." />
+    </LinearLayout>
+</RelativeLayout>

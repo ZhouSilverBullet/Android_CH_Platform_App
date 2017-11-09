@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/ch_view_home_openning_item_icon"
+        android:layout_width="@dimen/ch_app_icon_size"
+        android:layout_height="@dimen/ch_app_icon_size"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ch_default_apk_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/ch_view_home_openning_item_btn"
+        android:layout_toRightOf="@+id/ch_view_home_openning_item_icon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ch_view_home_openning_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="1号标题"
+            android:textColor="@color/ch_black"
+            android:textSize="@dimen/ch_app_text_size"
+            />
+
+        <TextView
+            android:id="@+id/ch_view_home_openning_item_type_and_size"
+            android:textSize="@dimen/ch_app_text_small_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="回合  |  232M"
+            android:textColor="@color/ch_common_hint" />
+
+        <TextView
+            android:id="@+id/ch_view_home_openning_item_des"
+            android:textSize="@dimen/ch_app_text_small_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="这是一款游戏这是一款游戏这是一款游戏这是一款游戏这是一款游戏一款游戏这是一款游戏一款游戏这是一款游戏一款游戏这是一款游戏一款游戏这是一款游戏"
+            android:textColor="@color/ch_common_hint" />
+    </LinearLayout>
+
+    <com.caohua.games.ui.download.DownloadButton
+        android:id="@+id/ch_view_home_openning_item_btn"
+        android:layout_width="@dimen/ch_app_download_button_size"
+        android:layout_height="@dimen/ch_app_download_button_height_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/ch_color_download_normal_title"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="下载"
+        android:textColor="@color/ch_white" />
+
+</merge>

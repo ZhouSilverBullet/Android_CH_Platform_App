@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ch_fragment_gift_center_classify_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.caohua.games.ui.giftcenter.widget.WaveSideBarView
+        android:id="@+id/ch_fragment_gift_center_classify_side_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/ch_fragment_gift_center_classify_progress"
+        style="@style/ch_progress_circle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDuration="800"
+        android:visibility="gone" />
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_fragment_gift_center_classify_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.caohua.games.ui.widget.NoNetworkView
+        android:id="@+id/ch_fragment_gift_center_classify_no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

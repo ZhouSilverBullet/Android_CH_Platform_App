@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chsdk.ui.widget.RiffEffectLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="@color/ch_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ch_gift_center_h_scroll_item_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ch_default_apk_icon" />
+
+    <TextView
+        android:id="@+id/ch_gift_center_h_scroll_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="最佳阵容"
+        android:textColor="@color/ch_black"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ch_gift_center_h_scroll_item_gift_count_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="礼包总数："
+            android:textColor="@color/ch_text_hint"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/ch_gift_center_h_scroll_item_gift_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ch_color_download_normal_title"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</com.chsdk.ui.widget.RiffEffectLinearLayout>

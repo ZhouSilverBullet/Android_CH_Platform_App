@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/ch_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ch_color_download_normal_title"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ch_dialog_login_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="用户登录"
+            android:textColor="@color/ch_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/ch_text_hint" />
+
+    <RelativeLayout
+        android:id="@+id/ch_dialog_rl_fast"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <ImageView
+            android:id="@+id/ch_dialog_pull_down_logo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:padding="3dp"
+            android:src="@drawable/ch_dialog_register_pull_down_logo" />
+
+        <EditText
+            android:id="@+id/ch_dialog_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/ch_dialog_pull_down_logo"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入账户名/手机号"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:textColor="@color/ch_black"
+            android:textColorHint="@color/ch_text_hint"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/ch_text_hint" />
+
+    <EditText
+        android:id="@+id/ch_dialog_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:password="true"
+        android:singleLine="true"
+        android:textColor="@color/ch_black"
+        android:textColorHint="@color/ch_text_hint"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/ch_text_hint" />
+
+    <com.chsdk.ui.widget.RippleEffectButton
+        android:id="@+id/ch_dialog_entergame"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ch_dialog_pay_btn"
+        android:text="进入"
+        android:textColor="@color/ch_color_download_normal_title"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            android:id="@+id/ch_dialog_fastregist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号注册"
+            android:textColor="@drawable/ch_dialog_gray_font_bg"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/ch_dialog_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="忘记密码"
+            android:textColor="@drawable/ch_dialog_gray_font_bg"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

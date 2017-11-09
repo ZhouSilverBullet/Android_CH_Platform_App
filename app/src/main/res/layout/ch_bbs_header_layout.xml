@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_bbs_header_topview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ch_white">
+
+    <LinearLayout
+        android:id="@+id/ch_bbs_header_center_linear"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ch_bbs_header_center_ll"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ch_bbs_header_game_icon"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/ch_bbs_header_game_tiezi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/ch_bbs_header_game_icon"
+                android:text="帖子"
+                android:textColor="@color/ch_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ch_bbs_header_game_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/ch_bbs_header_game_tiezi"
+                android:text="今日"
+                android:textColor="@color/ch_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ch_bbs_header_game_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ch_bbs_header_game_tiezi"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/ch_bbs_header_game_icon"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="无敌大航海无敌大航海无敌大航海"
+                android:textColor="@color/ch_black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/ch_bbs_header_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/ch_bbs_header_game_icon"
+                android:gravity="center_vertical"
+                android:text="无敌大航海"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/ch_bbs_header_center_divider"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_below="@id/ch_bbs_header_center_linear"
+        android:layout_marginTop="25dp"
+        android:background="@color/ch_gray" />
+
+    <com.caohua.games.ui.bbs.BBSSelectorTypeView
+        android:id="@+id/ch_header_type_view"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/ch_bbs_header_center_divider"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <View
+        android:id="@+id/ch_bbs_header_center_divider_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ch_header_type_view"
+        android:background="@color/ch_gray" />
+
+    <LinearLayout
+        android:id="@+id/top_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ch_bbs_header_center_divider_3"
+        android:orientation="vertical" />
+
+    <View
+        android:id="@+id/ch_bbs_header_center_divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/top_article"
+        android:background="@color/ch_gray" />
+
+    <RelativeLayout
+        android:id="@+id/ch_header_list_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/ch_bbs_header_center_divider_2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="帖子列表"
+            android:textColor="@color/ch_black" />
+
+        <TextView
+            android:id="@+id/ch_header_list_title_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="回复优先"
+            android:textColor="@color/ch_black" />
+    </RelativeLayout>
+</RelativeLayout>

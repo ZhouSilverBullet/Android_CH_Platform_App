@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ch_home_title_bg"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <!--<com.caohua.games.ui.widget.SubActivityTitleView-->
+    <!--android:id="@+id/ch_account_home_title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--app:sub_activity_title_bg="@color/ch_transparent"-->
+    <!--app:sub_activity_title_des=""-->
+    <!--app:sub_activity_title_img_change="false"-->
+    <!--app:sub_activity_title_text_color="@color/ch_white" />-->
+
+
+    <RelativeLayout
+        android:id="@+id/ch_account_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <com.caohua.games.ui.account.AccountHeadView
+            android:id="@+id/ch_view_account_home_page_top_icon"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:imageClickBg="false" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ch_view_account_home_page_top_icon">
+
+            <TextView
+                android:id="@+id/ch_view_account_home_page_top_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/ch_white"
+                android:textSize="18sp"
+                tools:text="111111" />
+
+            <LinearLayout
+                android:id="@+id/ch_view_account_home_page_level_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ch_view_account_home_page_top_nick"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:id="@+id/ch_account_home_level_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/ch_account_home_level_des"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/ch_usercenter_level_bg"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="4dp"
+                        android:text="LV1"
+                        android:textColor="@color/ch_white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/ch_account_home_level_des"
+                        android:layout_width="22dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ch_level_des" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/ch_account_home_level_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="6dp"
+                    android:lines="1"
+                    android:text="初来乍到"
+                    android:textColor="@color/ch_white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ch_view_account_home_page_top_vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/ch_white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="1111111111111111" />
+
+        <TextView
+            android:id="@+id/ch_view_account_home_page_top_type"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ch_view_account_home_page_top_icon"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="-10dp"
+            android:background="@drawable/ch_usercenter_official_bg"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="1dp"
+            android:text="超级版主"
+            android:textColor="@color/ch_white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ch_view_home_page_top_vip_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ch_account_level_name_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="5dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="16dp">
+
+                <View
+                    android:id="@+id/ch_account_vip_des"
+                    android:layout_width="18dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/ch_level_vip_des" />
+
+                <TextView
+                    android:id="@+id/ch_account_home_page_top_vip_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ch_account_vip_des"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="4dp"
+                    android:text="1"
+                    android:textColor="@color/ch_white"
+                    android:textSize="12sp"
+                    android:textStyle="bold|italic" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/ch_account_home_page_top_vip_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text=""
+                android:textColor="@color/ch_white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

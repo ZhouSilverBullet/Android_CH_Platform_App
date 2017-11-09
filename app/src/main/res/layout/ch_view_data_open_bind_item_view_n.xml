@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/ch_color_white"
+    android:orientation="vertical">
+
+    <com.chsdk.ui.widget.RiffEffectLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ch_view_data_open_bind_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不是你的萝卜"
+            android:textColor="@color/ch_black" />
+
+        <TextView
+            android:id="@+id/ch_view_data_open_bind_item_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="斯诺路意士"
+            android:textColor="@color/ch_text_hint" />
+    </com.chsdk.ui.widget.RiffEffectLinearLayout>
+
+    <ImageView
+        android:id="@+id/ch_view_data_open_bind_item_edit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginTop="-5dp"
+        android:src="@drawable/ch_data_open_edit_icon" />
+</RelativeLayout>

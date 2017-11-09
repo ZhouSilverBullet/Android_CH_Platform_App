@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:bottomLeftRadius="2dp"
+        android:bottomRightRadius="2dp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="2dp" />
+    <gradient
+        android:angle="90"
+        android:endColor="@color/ch_vip_view_pager_submit_color_l"
+        android:startColor="@color/ch_vip_view_pager_submit_color_r" />
+</shape>

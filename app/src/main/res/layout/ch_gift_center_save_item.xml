@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ch_color_white"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/ch_gift_center_save_item_rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/ch_gift_center_save_item_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ch_default_apk_icon" />
+
+        <TextView
+            android:id="@+id/ch_gift_center_save_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ch_gift_center_save_item_image"
+            android:text="VIP5专享礼包"
+            android:textColor="@color/ch_black" />
+
+        <TextView
+            android:id="@+id/ch_gift_center_save_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ch_gift_center_save_item_title"
+            android:layout_toRightOf="@id/ch_gift_center_save_item_image"
+            android:text="坦克前线"
+            android:textColor="@color/ch_text_hint" />
+
+        <TextView
+            android:id="@+id/ch_gift_center_save_item_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ch_gift_center_save_item_type"
+            android:layout_toRightOf="@id/ch_gift_center_save_item_image"
+            android:text="坦克前线"
+            android:textColor="@color/ch_color_download_normal_title" />
+
+        <TextView
+            android:id="@+id/ch_gift_center_save_item_btn"
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/download_button_shape_downloading"
+            android:gravity="center"
+            android:text="复制码"
+            android:textColor="@color/ch_white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ch_gift_center_save_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ch_gift_center_save_item_rl_1"
+        android:layout_margin="5dp"
+        android:text="有效期：1111111111"
+        android:textColor="@color/ch_text_hint" />
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/ch_gift_center_save_item_time"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:text="请尽快使用，否则会进入淘号"-->
+        <!--android:textColor="@color/ch_text_hint" />-->
+</RelativeLayout>

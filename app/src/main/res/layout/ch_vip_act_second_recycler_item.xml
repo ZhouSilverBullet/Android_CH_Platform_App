@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chsdk.ui.widget.RiffEffectLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_white"
+    android:orientation="vertical"
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/ch_act_second_recycler_item_img"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ch_default_pic" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/ch_act_second_recycler_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ch_act_second_recycler_item_des"
+            android:ellipsize="end"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="狂暴之翼单笔充值有惊喜"
+            android:textColor="@color/ch_black" />
+
+        <TextView
+            android:id="@+id/ch_act_second_recycler_item_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="日常活动"
+            android:textColor="@color/ch_text_hint" />
+    </RelativeLayout>
+</com.chsdk.ui.widget.RiffEffectLinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_list_item_bbs_list_error"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_gray"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ch_bbs_empty_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ch_no_data" />
+
+    <TextView
+        android:id="@+id/ch_bbs_empty_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="快来占领沙发吧！"
+        android:textColor="@color/ch_text_hint"
+        android:textSize="12sp" />
+</LinearLayout>

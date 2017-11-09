@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chsdk.ui.widget.RiffEffectRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="91dp"
+    android:background="@color/ch_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ch_search_article_recycler_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:text="我是游戏标题我是游戏标题我是游戏标题我是游戏标题"
+        android:textColor="@color/ch_black"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ch_search_article_recycler_item_image"
+        android:layout_width="109dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/ch_search_article_recycler_item_title"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ch_default_pic" />
+
+    <TextView
+        android:id="@+id/ch_search_article_recycler_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ch_search_article_recycler_item_bottom_layout"
+        android:layout_below="@id/ch_search_article_recycler_item_title"
+        android:layout_marginRight="17dp"
+        android:layout_toRightOf="@id/ch_search_article_recycler_item_image"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="我是标题"
+        android:textColor="@color/ch_black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ch_search_article_recycler_item_image"
+        android:layout_toLeftOf="@+id/ch_search_article_recycler_item_bottom_layout"
+        android:layout_toRightOf="@id/ch_search_article_recycler_item_image">
+
+        <TextView
+            android:id="@+id/ch_search_article_recycler_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ch_search_article_text_bg"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:paddingBottom="1dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="1dp"
+            android:singleLine="true"
+            android:text="大神分享"
+            android:textColor="@color/ch_text_hint"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ch_search_article_recycler_item_bottom_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ch_search_article_recycler_item_image"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/ch_bottom_emoji_favor_normal" />
+
+            <TextView
+                android:id="@+id/ch_search_article_recycler_item_upvote_total"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textColor="@color/ch_text_hint"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/ch_prefecture_comment" />
+
+            <TextView
+                android:id="@+id/ch_search_article_recycler_item_comment_total"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textColor="@color/ch_text_hint"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.chsdk.ui.widget.RiffEffectRelativeLayout>

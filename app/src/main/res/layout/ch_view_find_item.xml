@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/ch_find_item_icon_left"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:padding="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ch_pay_icon" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/ch_find_item_string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值草花币"
+            android:textColor="@color/ch_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ch_find_item_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ch_find_item_string"
+            android:text="充值草花币"
+            android:textColor="@color/ch_text_hint"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ch_find_img_new_message"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/shape_red_circle"
+        android:paddingRight="5dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/ch_find_item_icon_right"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:padding="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ch_common_title_more" />
+</merge>

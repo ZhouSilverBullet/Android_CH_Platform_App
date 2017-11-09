@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tabs_area"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/ch_white"
+    android:orientation="horizontal">
+
+    <com.culiu.mhvp.core.tabs.com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/ch_view_account_home_page_viewpage_strip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:pstsIndicatorColor="@color/ch_green" />
+</LinearLayout>

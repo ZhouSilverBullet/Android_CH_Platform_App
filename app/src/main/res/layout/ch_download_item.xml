@@ -1,0 +1,90 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/ch_download_item_icon"
+        android:layout_width="@dimen/ch_app_icon_size"
+        android:layout_height="@dimen/ch_app_icon_size"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ch_default_apk_icon" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ch_download_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Unknown"
+            android:textColor="@color/ch_black"
+            android:textSize="@dimen/ch_app_text_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ch_app_download_ll_margin_top"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/ch_download_item_size"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/ch_common_hint"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/ch_download_item_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:text="0%"
+                android:textColor="@color/ch_common_hint"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/ch_download_item_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/ch_download_progress_bg" />
+
+    </LinearLayout>
+
+    <com.chsdk.ui.widget.RippleEffectButton
+        android:id="@+id/ch_download_item_btn"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:background="@color/ch_color_download_normal_title"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:text="暂停"
+        android:textSize="13sp"
+        android:textColor="@color/ch_white" />
+
+</merge>

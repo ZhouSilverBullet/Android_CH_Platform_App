@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_white"
+    android:padding="0dp"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sub_activity_title_des="下载管理"
+        android:orientation="horizontal" />
+
+    <ExpandableListView
+        android:id="@+id/ch_download_expand_list"
+        android:layout_width="match_parent"
+        android:groupIndicator="@null"
+        android:background="#FFEEF3F4"
+        android:padding="10dp"
+        android:divider="@null"
+        android:childIndicator="@null"
+        android:childDivider="@null"
+        android:cacheColorHint="@color/ch_transparent"
+        android:layout_height="match_parent"/>
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_download_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_gray"
+        app:empty_des="当前没有下载任务"/>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/textView_pay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/ch_pay_color_change"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1000元"
+        android:textColor="@color/ch_black"
+        android:textSize="14sp" />
+</merge>

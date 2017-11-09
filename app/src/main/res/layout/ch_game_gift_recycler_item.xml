@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.caohua.games.ui.giftcenter.widget.GameGiftTopView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_game_gift_recycler_item_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</com.caohua.games.ui.giftcenter.widget.GameGiftTopView>

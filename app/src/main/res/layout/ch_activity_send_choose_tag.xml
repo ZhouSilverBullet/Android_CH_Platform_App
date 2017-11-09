@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ch_activity_send_edit_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_color_white"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sub_activity_title_des="选择标签"
+        />
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/ch_activity_send_choose_tag_back"-->
+            <!--android:layout_width="45dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:padding="15dp"-->
+            <!--android:src="@drawable/ch_user_center_left_icon_back" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:gravity="center"-->
+            <!--android:text="选择标签"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="@color/ch_black" />-->
+    <!--</RelativeLayout>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ch_activity_send_choose_tag_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ch_gray"
+            android:padding="10dp" />
+
+        <com.caohua.games.ui.widget.EmptyView
+            android:id="@+id/ch_activity_send_choose_tag_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:empty_des="加载数据失败,请点击重试" />
+    </FrameLayout>
+</LinearLayout>

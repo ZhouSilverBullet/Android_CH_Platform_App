@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chsdk.ui.widget.RiffEffectLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_game_center_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/ch_game_center_item2_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ch_game_center_item2_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="红色复仇"
+            android:textColor="@color/ch_black"
+            android:textSize="@dimen/ch_app_text_size" />
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ch_game_center_item2_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginBottom="3dp"
+            android:text="红色复仇红色复仇红色复仇红色复仇红色复仇红色复仇"
+            android:textColor="@color/ch_text_hint"
+            android:textSize="@dimen/ch_app_text_small_size" />
+
+    </RelativeLayout>
+
+    <com.chsdk.ui.widget.RippleEffectButton
+        android:id="@+id/ch_game_center_item2_enter"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ch_game_center_enter_bg"
+        android:padding="3dp"
+        android:textSize="12sp"
+        android:text="进入专区"
+        android:textColor="@color/black" />
+</com.chsdk.ui.widget.RiffEffectLinearLayout>

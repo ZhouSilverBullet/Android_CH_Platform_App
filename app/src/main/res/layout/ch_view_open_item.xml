@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.caohua.games.ui.widget.DecorationItemView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/ch_open_item_download_time"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="10:12"
+        android:textColor="@color/ch_black"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/ch_open_item_download_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ch_default_apk_icon" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ch_open_item_download_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/ch_black"
+            android:textSize="@dimen/ch_app_text_size"
+            />
+
+        <TextView
+            android:id="@+id/ch_open_item_download_des"
+            android:textSize="@dimen/ch_app_text_small_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/ch_common_hint" />
+    </LinearLayout>
+
+    <com.caohua.games.ui.download.DownloadButton
+        android:id="@+id/ch_open_item_download_btn"
+        android:layout_width="@dimen/ch_app_download_button_size"
+        android:layout_height="@dimen/ch_app_download_button_height_size"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:background="@color/ch_color_download_normal_title"
+        android:text="下载"
+        android:textColor="@color/ch_white" />
+</merge>

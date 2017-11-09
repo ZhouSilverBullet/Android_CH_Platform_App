@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chsdk.ui.widget.RiffEffectRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_forum_list_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ch_forum_list_item_image"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ch_forum_list_item_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ch_forum_list_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="战争指挥官"
+            android:textColor="@color/ch_black" />
+
+        <TextView
+            android:id="@+id/ch_forum_list_item_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:text="战争指挥官"
+            android:textColor="@color/ch_text_hint"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ch_forum_list_item_icon_right"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="3dp"
+        android:src="@drawable/ch_common_title_more" />
+</com.chsdk.ui.widget.RiffEffectRelativeLayout>

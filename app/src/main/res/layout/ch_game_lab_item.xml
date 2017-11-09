@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chsdk.ui.widget.RiffEffectRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <ImageView
+        android:id="@+id/ch_game_lab_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ch_default_pic" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ch_game_lab_item_game_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ch_default_apk_icon" />
+
+        <TextView
+            android:id="@+id/ch_game_lab_item_game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/ch_game_lab_item_game_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="11111111111111111"
+            android:textColor="@color/ch_white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ch_game_lab_item_game_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ch_game_lab_item_game_name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/ch_game_lab_item_game_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="1111111111111111"
+            android:textColor="@color/ch_white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</com.chsdk.ui.widget.RiffEffectRelativeLayout>

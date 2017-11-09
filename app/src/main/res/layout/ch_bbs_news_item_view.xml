@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/ch_bbs_news_item_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ch_bbs_news_item_view_act_bg"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:text="活动"
+            android:textColor="@color/ch_sub_activity_pop" />
+
+        <TextView
+            android:id="@+id/ch_bbs_news_item_text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="这是活动的界面这是活动的界面这是活动的界面这是活动的界面这是活动的界面这是活动的界面" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/ch_bbs_news_item_text_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ch_gray" />
+</merge>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/ch_view_rank_more"
+        android:layout_toRightOf="@+id/ch_view_rank_icon"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ch_view_rank_layout_item_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/shape_red_circle"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/ch_white"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/ch_view_rank_item_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:lines="1"
+                android:text="红色复仇爱上的离开家山东矿机"
+                android:textColor="@color/ch_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ch_view_rank_layout_item_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/shape_orange_circle"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/ch_white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/ch_view_rank_item_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="战争指挥官"
+                android:textColor="@color/ch_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ch_view_rank_layout_item_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/shape_yellow_circle"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/ch_white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/ch_view_rank_item_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="万剑诛仙"
+                android:textColor="@color/ch_black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ch_view_rank_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ch_common_title_more" />
+
+    <ImageView
+        android:id="@+id/ch_view_rank_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@drawable/ch_default_pic" />
+</merge>
+

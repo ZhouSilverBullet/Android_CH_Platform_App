@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.chsdk.ui.widget.RiffEffectImageButton
+        android:id="@+id/ch_hot_item_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:src="@drawable/ch_default_pic" />
+
+    <TextView
+        android:id="@+id/ch_hot_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:maxEms="10"
+        android:text="这是活动这是活动这是活动这是活动这是活动这是活动这是活动这是活动这是活动这是活动这是活动这是活动"
+        android:textColor="@color/ch_black" />
+</merge>

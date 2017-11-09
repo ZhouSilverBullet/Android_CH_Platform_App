@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_transparent"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <com.caohua.games.ui.widget.NavigationScrollView
+        android:id="@+id/ch_home_top_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ch_white"
+        android:orientation="vertical" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffeeeeee" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ch_home_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_gray" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/textView_pay9"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/ch_shape_search_lines"
+        android:digits="1234567890"
+        android:gravity="center"
+        android:hint="其他金额"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:maxLength="6"
+        android:textColorHint="@color/ch_text_hint"
+        android:textColor="@color/ch_black"
+        android:textSize="14sp">
+    </EditText>
+</merge>

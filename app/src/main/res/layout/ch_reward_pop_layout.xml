@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ch_pop_reward_bg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ch_reward_pop_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/ch_task_caohuadou_icon" />
+
+        <TextView
+            android:id="@+id/ch_reward_pop_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="草花豆" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ch_reward_pop_dec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="点击相应的任务，弹出任务介绍，背景加上蒙版，包括任务类型，任务名称、任务奖励"
+        android:textColor="@color/ch_black"
+        android:textSize="12sp" />
+</LinearLayout>

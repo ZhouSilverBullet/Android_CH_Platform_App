@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.caohua.games.ui.emoji.FaceRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/faceRelativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ch_color_white">
+
+    <LinearLayout
+        android:id="@+id/ch_face_layout_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.02dp"
+            android:background="@color/ch_text_hint" />
+
+        <include
+            layout="@layout/ch_comment_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.02dp"
+            android:background="@color/ch_text_hint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ch_color_white"
+            android:padding="2dp">
+
+            <EditText
+                android:id="@+id/et_sendmessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/ch_comment_edit_text_bg"
+                android:hint="请输入要输入的内容"
+                android:textColor="@color/ch_black"
+                android:textColorHint="@color/ch_text_hint"
+                android:inputType="textMultiLine"
+                android:maxHeight="120dp"
+                android:maxLength="140"
+                android:maxLines="3"
+                android:padding="5dp"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/btn_face"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:padding="5dp"
+                android:src="@drawable/ch_bottom_emoji_face" />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/ch_black"
+                android:background="@drawable/ch_emoji_chat_send_btn"
+                android:text="发送" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_facechoose"
+        android:layout_width="fill_parent"
+        android:layout_height="124dip"
+        android:layout_below="@id/rl_input"
+        android:background="#f6f5f5"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/ch_emoji_load_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_contains"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dip"
+            android:gravity="center"
+            android:orientation="horizontal"></LinearLayout>
+    </RelativeLayout>
+
+</com.caohua.games.ui.emoji.FaceRelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/ch_send_item_image_top"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:src="@drawable/ch_default_apk_icon"
+        android:scaleType="centerInside"/>
+
+    <ImageView
+        android:id="@+id/ch_send_item_remove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="2dp"
+        android:layout_gravity="right|top"
+        android:src="@drawable/ch_dialog_list_close"
+        android:visibility="gone"
+        />
+</FrameLayout>

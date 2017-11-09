@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ch_vip_reward_item_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ch_default_apk_icon" />
+
+    <TextView
+        android:id="@+id/ch_vip_reward_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/ch_vip_reward_item_icon"
+        android:text="等级大礼包"
+        android:textColor="@color/ch_black"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ch_vip_reward_item_title"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/ch_vip_reward_item_btn"
+        android:layout_toRightOf="@id/ch_vip_reward_item_icon">
+
+        <TextView
+            android:id="@+id/ch_vip_reward_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="100草花豆"
+            android:textColor="@color/ch_vip_draw_btn_color" />
+
+        <LinearLayout
+            android:id="@+id/ch_vip_reward_view_progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/ch_vip_reward_view_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:max="100"
+                android:minHeight="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:progress="30"
+                android:progressDrawable="@drawable/ch_vip_reward_view_progress_bg" />
+
+            <TextView
+                android:id="@+id/ch_vip_reward_view_progress_value"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="30%"
+                android:textColor="@color/ch_vip_draw_btn_color" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/ch_vip_reward_item_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="60dp"
+        android:layout_height="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ch_vip_draw_button_bg"
+        android:text="领取"
+        android:textColor="@color/ch_white"
+        android:textSize="15sp" />
+</RelativeLayout>

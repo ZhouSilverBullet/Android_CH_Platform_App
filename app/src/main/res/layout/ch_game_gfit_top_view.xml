@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ch_white"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/ch_game_gift_top_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="13dp"
+        android:src="@drawable/ch_default_apk_icon" />
+
+    <TextView
+        android:id="@+id/ch_game_gift_top_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ch_game_gift_top_image"
+        android:textColor="@color/ch_black"
+        android:textSize="15sp"
+        tools:text="数码宝贝" />
+
+    <TextView
+        android:id="@+id/ch_game_gift_top_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ch_game_gift_top_title"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/ch_game_gift_top_image"
+        android:textColor="@color/ch_text_hint"
+        tools:text="新增" />
+
+    <TextView
+        android:id="@+id/ch_game_gift_top_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ch_game_gift_top_image"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/ch_game_gift_top_image"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/ch_text_hint"
+        tools:text="新增" />
+</RelativeLayout>

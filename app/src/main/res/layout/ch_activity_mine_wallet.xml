@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ch_web_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ch_home_title_bg"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/ch_mine_wallet_title_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/ch_user_center_left_icon_back" />
+
+            <TextView
+                android:id="@+id/ch_web_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="60dp"
+                android:ellipsize="end"
+                android:text="我的钱包"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/ch_white"
+                android:textSize="20sp" />
+
+            <com.chsdk.ui.widget.RiffEffectImageButton
+                android:id="@+id/ch_activity_mine_wallet_faq"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ch_pay_question" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.chsdk.ui.widget.RiffEffectRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/ch_activity_mine_wallet_image_ch_cb"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ch_mine_wallet_cb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/ch_activity_mine_wallet_image_ch_cb"
+            android:text="草花币"
+            android:textColor="@color/ch_black" />
+
+        <TextView
+            android:id="@+id/ch_activity_mine_wallet_text_ch_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:text="20"
+            android:textColor="@color/ch_black"
+            android:textStyle="bold" />
+    </com.chsdk.ui.widget.RiffEffectRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ch_gray" />
+
+    <com.chsdk.ui.widget.RiffEffectRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/ch_activity_mine_wallet_image_ch_cd"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ch_mine_wallet_cd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/ch_activity_mine_wallet_image_ch_cd"
+            android:text="草花豆"
+            android:textColor="@color/ch_black" />
+
+        <TextView
+            android:id="@+id/ch_activity_mine_wallet_text_ch_cd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:text="2000"
+            android:textColor="@color/ch_black"
+            android:textStyle="bold" />
+    </com.chsdk.ui.widget.RiffEffectRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ch_gray" />
+
+    <com.chsdk.ui.widget.RiffEffectRelativeLayout
+        android:id="@+id/ch_activity_mine_wallet_by_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/ch_activity_mine_wallet_image_ch_by"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ch_mine_wallet_sliver" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/ch_activity_mine_wallet_image_ch_by"
+            android:text="绑银"
+            android:textColor="@color/ch_black" />
+
+        <TextView
+            android:id="@+id/ch_activity_mine_wallet_text_ch_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:text="20"
+            android:textColor="@color/ch_black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ch_common_title_more" />
+    </com.chsdk.ui.widget.RiffEffectRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ch_gray" />
+
+    <com.chsdk.ui.widget.RiffEffectRelativeLayout
+        android:id="@+id/ch_activity_mine_wallet_daijinjuan_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/ch_activity_mine_wallet_image_ch_daijinjuan"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ch_mine_wallet_coupon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/ch_activity_mine_wallet_image_ch_daijinjuan"
+            android:text="优惠劵"
+            android:textColor="@color/ch_black" />
+
+        <TextView
+            android:id="@+id/ch_activity_mine_wallet_text_ch_daijinjuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:text="2000"
+            android:textColor="@color/ch_black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ch_common_title_more" />
+    </com.chsdk.ui.widget.RiffEffectRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ch_gray" />
+</LinearLayout>

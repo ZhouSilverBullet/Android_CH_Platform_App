@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.caohua.games.ui.account.AccountHeadView
+            android:id="@+id/ch_view_my_msg_body_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:imageWidth="50dp"
+            android:layout_centerVertical="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/ch_view_my_msg_body_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/ch_view_my_msg_body_icon" >
+
+            <TextView
+                android:id="@+id/ch_view_my_msg_body_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/ch_view_my_msg_time"
+                android:layout_marginRight="5dp"
+                android:lines="1"
+                android:text="社区助手"
+                android:textColor="@color/ch_black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ch_view_my_msg_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="12:00"
+                android:textColor="@color/ch_common_hint" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ch_view_my_msg_body_des"
+            android:layout_below="@+id/ch_view_my_msg_body_top"
+            android:layout_toRightOf="@+id/ch_view_my_msg_body_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:text="隐藏了你的贴子"
+            android:textColor="@color/ch_common_hint" />
+    </RelativeLayout>
+
+    <com.caohua.games.ui.widget.EmojiTextView
+        android:id="@+id/ch_view_my_msg_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/ch_black"
+        android:textSize="@dimen/ch_app_text_size"
+        android:text="尊敬的用户，由于贴子不符合社区规范，已被管理员隐藏，感谢您对草花手游的支持" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#F2F2F2"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ch_view_my_msg_sub_icon"
+            android:layout_width="@dimen/ch_app_icon_size"
+            android:layout_height="@dimen/ch_app_icon_size"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ch_default_apk_icon" />
+
+        <com.caohua.games.ui.widget.EmojiTextView
+            android:id="@+id/ch_view_my_msg_sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:lines="1"
+            android:textColor="@color/ch_black"
+            android:textSize="@dimen/ch_app_text_size"
+            android:text="尊敬的用户，由于贴子不符合社区规范，已被管理员隐藏，感谢您对草花手游的支持" />
+    </LinearLayout>
+</merge>

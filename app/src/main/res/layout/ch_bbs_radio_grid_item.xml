@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.chsdk.ui.widget.RiffEffectImageButton
+        android:id="@+id/ch_radio_grid_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:contentDescription="真相"
+        android:scaleType="centerCrop"
+        android:src="@drawable/download_button_shape_error" />
+
+    <TextView
+        android:id="@+id/ch_radio_grid_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="社区榜"
+        android:textColor="@color/ch_color_white"
+        android:textSize="@dimen/ch_app_text_small_size" />
+</merge>

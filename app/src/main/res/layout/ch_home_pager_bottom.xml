@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/ch_home_bottom_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <com.caohua.games.ui.widget.HomeBottomTabLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/ch_home_pager_tab1"
+        app:tabText="专区"
+        />
+    <com.caohua.games.ui.widget.HomeBottomTabLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/ch_home_pager_tab2"
+        app:tabText="广场"
+        />
+    <com.caohua.games.ui.widget.HomeBottomTabLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/ch_home_pager_tab3"
+        app:tabText="发现"
+        />
+    <com.caohua.games.ui.widget.HomeBottomTabLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/ch_home_pager_tab4"
+        app:tabText="我的"
+        />
+</LinearLayout>

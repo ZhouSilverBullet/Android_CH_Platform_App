@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.caohua.games.ui.vip.widget.VipViewPagerLayout
+                android:id="@+id/ch_activity_vip_pager_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <com.caohua.games.ui.vip.widget.VipCardView
+                android:id="@+id/ch_activity_vip_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ch_black_alpha_title" />
+
+            <com.caohua.games.ui.vip.widget.VipMySpecialView
+                android:id="@+id/ch_vip_my_special_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ch_white" />
+
+            <com.caohua.games.ui.vip.widget.VipRewardView
+                android:id="@+id/ch_activity_ch_vip_reward_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ch_white" />
+
+            <com.caohua.games.ui.vip.widget.VipRechargeGiftView
+                android:id="@+id/ch_activity_ch_vip_recharge_gift_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ch_white" />
+
+            <com.caohua.games.ui.vip.widget.VipActView
+                android:id="@+id/ch_activity_ch_vip_act_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ch_white" />
+
+            <com.caohua.games.ui.vip.widget.VipSpecialView
+                android:id="@+id/ch_activity_ch_vip_special_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ch_white"
+                android:visibility="gone" />
+
+            <com.caohua.games.ui.vip.widget.VipPlatformPowerView
+                android:id="@+id/ch_activity_ch_vip_platform_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ch_white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

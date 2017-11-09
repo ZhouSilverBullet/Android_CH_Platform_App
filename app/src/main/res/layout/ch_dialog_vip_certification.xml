@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ch_vip_certification_top_img_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ch_vip_certification_level_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="105dp">
+
+        <TextView
+            android:id="@+id/ch_vip_certification_level_text"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ch_vip_certification_top_img_text_bg"
+            android:gravity="center_horizontal|top"
+            android:includeFontPadding="false"
+            android:text="VIP1"
+            android:textColor="@color/ch_vip_certification_vip_text_color"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ch_vip_certification_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ch_vip_certification_level_text_layout"
+        android:layout_marginTop="50dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="银色子弹"
+        android:textColor="@color/ch_vip_draw_btn_color"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:id="@+id/ch_vip_certification_left_right_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ch_vip_certification_name"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/ch_vip_certification_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:lines="1"
+            android:text="VIP值12345"
+            android:textColor="@color/ch_vip_draw_btn_color"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/ch_vip_certification_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:lines="1"
+            android:text="还差12345升级"
+            android:textColor="@color/ch_vip_draw_btn_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@+id/ch_vip_certification_left_right_layout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ch_vip_certification_btn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ch_vip_certification_dialog_btn_n"
+        android:text="立即查看"
+        android:textColor="@drawable/ch_vip_certification_btn_text_bg"
+        android:textSize="20sp" />
+</RelativeLayout>

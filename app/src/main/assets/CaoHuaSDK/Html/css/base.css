@@ -1,0 +1,760 @@
+﻿@charset "utf8";
+ body, h1, h2, h3, h4, h5, h6 {
+            padding: 0;
+            margin: 0;
+            font-weight: 100;
+        }
+
+        * {
+            text-decoration: none;
+            font-family: 'Microsoft JhengHei';
+        }
+
+        #wrap {
+            max-width: 640px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        /* -------------------------- */
+        .nav {
+            padding: 3% 0;
+            background-color: #26bc5b;
+            color: #fff;
+            position: relative;
+            text-align: center;
+            display:none;
+        }
+
+            .nav a {
+                color: #fff;
+                display: block;
+                position: absolute;
+                top: 25%;
+                left: 4%;
+                font-size: 1.05em;
+            }
+        .editWrap{
+            border:1px solid #ebebeb;
+        } 
+        .editForm input {
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            color: #000;
+            border: 1px solid #dfdfdf;
+            font-size: 1.1em;
+            padding: 2.8% 0;
+            padding-left: 2.5%;
+            border-left: 0;
+            border-right: 0;
+        }
+        .editForm .a1,.EmailVail .a1 {
+            margin:4% 0;
+        }
+        .editForm .a1 .link{
+              display: block;
+            width: 90%;
+            margin: 0 auto;
+            color: #000;
+            border: 1px solid #dfdfdf;
+            font-size: 1.1em;
+            padding: 2.8% 0;
+            padding-left: 2.5%;
+            border-left: 0;
+            border-right: 0;
+        }
+        .editForm .a2 {
+            width: 51%;
+            float: left;
+            margin-left: 3.5%;
+        }
+        .editForm .a1 .btn,.EmailVail .a1 .btn {
+            padding: 2.5% 0;
+            color: #26bc5b;
+            border: 2px solid #26bc5b;
+            display:block;
+            margin:0 auto;
+            width:94%;
+            text-align:center;
+            font-size:1.2em;
+        }
+        .tip{
+            padding:5%;line-height:1.5
+        }
+        .tip h3 {
+            color: #464646;
+            font-size:1em;
+        }
+        .tip h4 {
+            color: #9a9a9a;
+            font-size: 0.9em;
+        }
+        .tip h4 span{
+            color:#fa7626;
+        }
+        .Popup{
+            width:80%;position:absolute;top:35%;left:10%;background-color:#fff;max-width:515px;display:none;z-index:3;
+        }
+        .Popup .tit{
+            background-color: #26bc5b;text-align:left;padding:3% 0;color:#fff;padding-left:3%;position:relative;
+        }
+        .Popup .tit a{
+            position: absolute;right: 0;top: 0;text-align: center;width:20%;
+        }
+          .Popup .tit img{
+           width:30%;margin-top: 15%;
+        }
+        .Popup .a1{
+            text-align:center;
+        }
+        .Popup .a1 h4{
+            padding: 5% 0;margin:3% 0; color: #26bc5b;font-size:1.3em;
+        }
+        .Popup .btnGroup a{
+            display: block; background-color: #26bc5b;color:#fff;padding:2% 3%;width:20%;margin:3% auto;text-align:center;
+        }
+        .EmailVail {
+            padding:3%;
+        }
+        .EmailVail h3{
+            color: #b25e22;text-align:left;line-height:1.6;margin:8% 0;padding:0 5%;
+        }
+         .EmailVail h4{
+             color: #a3a3a3;text-align:center;padding-top:5%;
+         }
+           .EmailVail h4 span{
+            color: #ff0d0d;
+         }
+               .EmailVail h5{
+            color: #a3a3a3;
+         }
+                 .EmailVail h5 span{
+            color: #fa7626;
+         }
+                 .sendCode{
+                     color:#26bc5b;
+                     border:1px solid #eee;
+                     padding:2%;
+                     border-radius:2px;
+                 }
+                 .t1{
+                     text-align:left;padding-top:10%;padding-left:5%;font-size:1.0em;color:#aeaeae;
+                 }
+                   .t1 span{
+                     color: #fa7626
+                 }
+                   .t2{
+                       background:url('../img/right_arrow.png') no-repeat left center;background-size:3%;background-position-x:95%;
+                   }
+                   .t3{
+                       float: left; margin-left: 4%; border-color: #26bc5b;font-size:1.2em;
+                   }
+                   .t4{
+                       text-align: left;
+                       padding-top: 8%;
+                       padding-left: 5%;
+                       font-size: 1.4em;
+                       color: #ac5514;
+                   }
+                   .editForm .t5{
+                        background:url('../img/down_arrow.png') no-repeat left center;background-size:5%;background-position:95%;
+                        margin-bottom:0;
+                   }
+                   .editForm .t6{
+                       margin:0;
+                       border:0;
+                   }
+                      .editForm .t6 a.link{
+                       
+                       border:0;
+                   }
+                      .t7{
+                          position:absolute;background-color:#fff;width:100%;border-bottom:1px solid #eee;height: 100px;overflow-y:scroll;display:none;
+                      }
+                      .GameInfo {
+                          overflow:hidden;border-bottom:1px solid #f2f2f2;
+                      }
+                      .GameInfo .a1{
+                          float:left;width:18%;padding:5%;
+                      }
+                      .GameInfo .a2{
+                          float:left;width:62%;line-height:1.5;padding:3%;padding-left:0;    padding-top: 4%;
+                      }
+                        .GameInfo .a2 h3{
+                         font-weight:bold;margin-bottom:2%;
+                      }
+                        .GameInfo .a2 h4{
+                            color: #8a8a8a;
+                        }
+                        .GiftList {
+                            list-style:none;margin:0;padding:0;
+                        }
+                        .GiftList li{
+                            overflow:hidden;display:block;border-bottom:1px solid #f2f2f2;padding:3.7% 5%;
+                        }
+                        .GiftList li .a1{
+                            float:left;
+                            line-height:1.8;
+                            width: 75%;
+                        }
+                        .GiftList li .a1 h4{
+                            font-size:1.05em;
+                        }
+                         .GiftList li .a1 h5{
+                            font-size:0.9em;color:#9f9f9f;
+                        }
+                          .GiftList li .a2{
+                            float:right;width:18%;margin-top:3%
+                        }
+                            .GiftList li .a2 a{
+                            color:#24b957;
+                            border:1px solid #24b957;padding:8% 0;
+                            text-align:center;
+                            font-size:1.05em;
+                            display:block;
+                        }
+.cover{
+   position:fixed;top:0;left:0;background-color:#000;opacity:0.5;width:100%;
+  display:none;z-index: 2;
+}
+.GiftPopup{
+    position:fixed;
+    bottom:30%;
+    z-index: 3;
+    background-color: #fff;width:73%;padding-bottom:3%;
+    border-radius:5px;
+    left:13.5%;
+    display:none;
+}
+.GiftPopup .a1{
+    text-align:center;width:80%;margin:0 auto;line-height:1.5; z-index:100;
+    margin-top:23%;
+}
+.GiftPopup .a1 h4{
+   font-size:0.9em;
+   color:#09b040;
+}
+.GiftPopup .a1 h5{
+   font-size:0.9em;
+}
+.GiftPopup .a2 a,.GiftPopup .a2 span{
+   font-size:1em;
+   color:#09b040;
+   display:block;
+   /*border:1px solid #09b040;*/
+   padding:2% 0;
+   text-align:center;
+   margin:3% auto;
+   border-radius:5px;
+   width:90%;
+}
+.GiftPopup .a2 h5{
+  
+   text-align:center;
+}
+.GiftPopup .close{
+    position:absolute;top:0;
+    right:0;width:12%;
+}
+.GiftPopup .close img{
+  width:100%;
+}
+.GiftPopup .head{
+    position:absolute;top:-30%;
+    right:29%;width:42%;
+}
+.GiftPopup .head img{
+  width:100%;
+}
+.tab{
+    background-color:#f7f7f9;
+    overflow:hidden;
+}
+.tab a{
+    display:block;
+    float:left;
+    width:33%;
+    padding:2.5% 0;
+    color:#525254;
+    text-align:center;
+    font-size:1.05em;
+    border-bottom:2px solid #f7f7f9;
+}
+.tab a.cur{
+    border-color:#0bb445;
+    color:#0bb445;
+}
+.order-list,.system-list,.pay-list{
+    list-style:none;margin:0;padding:0;
+}
+.order-list li{
+    overflow:hidden;
+    padding:5% 0 5% 3%;
+    border-bottom:1px solid #eee;
+}
+.order-list li .a1{
+    float:left;
+    font-size:1em;
+    width:25%;
+    text-align:center;
+}
+.order-list li .a2{
+    float:left;text-align:center;width:30%;
+}
+.order-list li .t20{
+    width:50%;padding-top:3%;
+}
+.order-list li .a2 h3{
+    font-size:1.05em;
+}
+.order-list li .a2 h4{
+    font-size:1.05em;color:#9d9d9d;
+}
+.order-list li .a3{
+    float:left;
+    color:#26bc5b;
+    margin-top:3%;
+       width:20%;
+       text-align:center;
+}
+.order-list li .a4{
+    float:left;
+    width:25%;
+    margin-top:3%;
+}
+.order-list li .a4 a{
+    background-color:#26bc5b;
+    color:#fff;
+    padding:3% 7%;
+    display:block;
+    font-size:1.05em;
+    text-align:center;
+    width:60%;
+    border-radius:20px;
+}
+.system-list li{
+    overflow:hidden;
+     border-bottom:1px solid #eee;
+}
+.system-list li .a1{
+    float:left;
+    width:20%;
+    position:relative;
+    padding:3%;
+    padding-right:0;
+}
+.system-list li .a1 img{
+    width:100%;
+}
+.system-list li .a2{
+    line-height:2;
+    margin-top:3%;
+    margin-left:1%;
+    float:left;
+    width:50%;
+}
+.system-list li .a2 h3{
+    font-size:1.05em;
+}
+.system-list li .a2 h4{
+    font-size: 1.05em;
+    color: #9d9d9d;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.system-list li .a3{
+    float:right;width:25%;text-align:right;
+}
+.system-list li .a3 a{
+    color:#26bc5b;
+    border:1px solid #26bc5b;padding:5% 10%;display:block;text-align:center;width:40%;border-radius:5px;
+    margin-top:30%;
+    margin-left:18%;
+}
+.system-list li span{
+    background-color:#fe0000;
+    color:#fff;
+    display:block;
+    position:absolute;
+    border-radius:30px;
+    width:20%;
+    top:10%;right:10%;
+    text-align:center;
+}
+.system-detail{
+    list-style:none;margin:0;padding:0;
+}
+.system-detail li{
+    overflow:hidden;
+    margin:6% 0;
+}
+.system-detail li .a1{
+    float:left;
+    width:20%;
+    text-align:center;
+    margin-top:2%;
+}
+.system-detail li .a1 img{
+    width:49%;
+    border-radius:50px;
+}
+.system-detail li .a1 h4{
+    font-size:0.6em;
+}
+.system-detail li .a2 {
+   width:63%;
+   background-color:#26bc5b;
+   color:#fff;
+   float:left;
+   padding:3%;
+   border-radius:5px;
+   margin-left:2%;
+}
+.system-detail li .a2 h4{
+    font-size:0.6em;
+}
+.tit{
+    text-align:left;
+    padding:3%;
+    padding-bottom:0;
+}
+.tit h4{
+    font-size:1.05em;
+}
+.ContectType .a1{
+  margin-bottom:4%;
+}
+.ContectType .a1 i{
+    overflow:hidden;
+}
+.ContectType .a1 .i span{
+    display:block;
+    float:left;
+    width:19%;
+    border:1px solid #26bc5b;
+    color:#26bc5b;
+    text-align:center;
+    padding:1% 0;
+    font-size:0.9em;
+    border-radius:3px;
+    margin:2% 6%;
+}
+.ContectType .a1 .i input{
+    display:block;
+    border:1px solid #26bc5b;
+    width:90%;
+    color:#26bc5b;
+    margin:0 auto;
+    padding: 3.2% 4%;
+    font-size:0.9em;
+}
+.ContectType .a1 .i input::-webkit-input-placeholder{
+    color:#26bc5b;
+}
+.ContectType .a2{
+    overflow:hidden;
+    line-height:1.5;
+   
+     margin-left: 1.3%;
+}
+.ContectType .a2 a{
+    display:block;
+    float:left;
+    width:33%;
+    text-align:center;
+    /* margin:3% 0; */
+    margin-top:1%;
+    position:relative;
+
+}
+.ContectType .a2 img{
+    width:25%;
+}
+.ContectType .a2 h4{
+    color:#2d2d2f;
+    font-size:0.9em;
+}
+.ContectType .a3{
+    /*margin:5% 0;*/
+    /*margin-bottom:15%;*/
+    margin-top: 2%;
+}
+.ContectType .a3 textarea{
+    border:1px solid #26bc5b;
+    border-radius:5px;
+    display:block;
+    margin:0 auto;
+    width:86%;
+    padding:2%;
+    font-size:0.9em;
+}
+.ContectType .a3 a{
+    background-color:#26bc5b;
+    color:#fff;
+    display:block;
+    margin:2% auto;
+    width:90%;
+    text-align:center;
+    padding:2.5% 0;
+    border-radius:5px;
+}
+.contectInfo {
+    line-height:1.8;margin:0 auto;width:83%;
+    margin-top:10%;
+}
+.contectInfo h3{
+    color:#a84b0b;
+}
+.contectInfo .a1{
+   text-align:left;
+}
+.contectInfo .a1 img{
+    width:5%;
+}
+.contectInfo .a1 span{
+    color:#3d3d3d;font-size:1.05em;
+}
+.contectInfo .a2{
+    margin-top:14%;
+   
+}
+.contectInfo .a2 h4{
+    font-size:1.03em;color:#3d3d3d; margin-bottom:5%;
+}
+.contectInfo .a2 div a{
+    display:inline-block;
+    color:#26bc5b;
+    border:1px solid #26bc5b;
+    width:26%;
+    text-align:center;
+    padding:8% 0;
+    border-radius:120px;
+    font-size:1.05em;
+    margin:0 10%;
+}
+.CenterList{
+    list-style:none;margin:2% 0;padding:0;background-color:#fff;padding-top:1px;margin-top: 1%;
+}
+.CenterList li{
+   overflow:hidden;
+   background:url('../img/right_arrow_a.png') no-repeat left center;
+   background-size:2.8%;
+   background-position:95%;
+   padding:2.5% 0;
+   padding-left:4%;
+   border:1px solid #f0f0f0;
+   border-top-width:0;
+}
+.CenterList a{
+    color:#000;
+}
+.CenterList li h3{
+  font-size:1.1em;float:left;width:100%;
+}
+.CenterList li h4{
+  font-size:0.9em;color:#afafaf;padding:1%; float:right;margin-right:12%;
+}
+.AccountInfo{
+    overflow:hidden;background-color:#fff;padding:3%;
+}
+.AccountInfo .a1{
+    float:left;
+    width:18%;
+}
+.AccountInfo .a1 img{
+    width:100%;
+    border-radius:100px;
+}
+.AccountInfo .a1{
+   float:left;
+}
+.AccountInfo .a2{
+   float:left;
+   line-height:2.1;
+   margin-left:2.3%;
+}
+.AccountInfo .a2 h3{
+   font-size:1.1em;
+}
+.AccountInfo .a2 h4{
+   font-size:0.9em;
+}
+.AccountInfo .a2 span{
+   color:#26bb5a;
+}
+.AccountInfo .a3{
+  margin-top:6%;
+}
+.AccountInfo .a3 a{
+   color:#fff;
+   background-color:#26bc5b;
+   padding:1% 4%;
+   border-radius:20px;
+   margin-left:20%;
+}
+.moneyChoice ul{
+    list-style:none;margin:0;padding:0;overflow:hidden;padding-top:2%;
+}
+.moneyChoice ul li{
+    float:left;width:33%;text-align:center;margin:2% 0;
+}
+.moneyChoice ul li a{
+    color:#666;display:block;padding:2% 4%;
+    border:1px solid #eee;
+    width:70%;
+    display:block;
+    margin:0 auto;
+    padding:6% 0;
+    border-radius:3px;
+}
+.moneyChoice ul li a.cur{
+     border-color:#09b040;
+     color:#09b040;
+}
+.moneyChoice input{
+    border:0;
+    border-bottom:1px solid #26bc5b;
+    width:90%;
+    margin:0 auto;
+    padding:2% 0;
+    display:none;
+    margin-left:5%;
+}
+.payType ul{
+    list-style:none;margin:0;padding:0;margin-left:5%;margin-top:2%;
+}
+.payType ul li{
+    border:1px solid #eee;overflow:hidden;
+    border-left-width:0;
+    border-right-width:0;
+    padding:2%;
+}
+.payType ul li a{
+    overflow:hidden;
+}
+.payType ul li a div{
+   float:left;text-align:center;
+}
+.payType ul li a div h3{
+ color:#26bc5b;
+}
+.payType .a1{
+    width:20%;
+}
+.payType .a2{
+    width:40%;text-align:left;padding-top:3%
+}
+.payType .a3{
+    width:38%;padding-top:3%;text-align:right;
+}
+.payPrompt{
+    padding:3%;margin:0 auto;
+}
+.payBottom{
+    overflow:hidden;position:fixed;bottom:0;left:0;width:100%;
+}
+.payBottom div{
+    float:left;padding:5% 3%;
+}
+.payBottom div h3{
+    text-align:center;
+    overflow:hidden;
+}
+.payBottom div h4{
+    text-align:center;
+    
+}
+.payBottom .a1{
+    width:48%;
+    background-color:#333333;
+    color:#fff;
+}
+.payBottom .a1 span{
+   font-size:0.6em;
+}
+.payBottom .a2{
+    width:40%;
+    background-color:#1ad102;
+    color:#fff;
+}
+.t23{
+    padding:2%;border-bottom:1px solid #eee;font-size:1.1em;background-color:#fff;
+}
+.loading{
+    position:absolute;left:40%;top:50%;margin:-20% 0 0 0;width:20%;display:none;z-index:4;
+}
+
+.tab-nav{
+    overflow:hidden;margin:2% 0;padding:3% 0;background-color:#fff;
+}
+.tab-nav a{
+    display:block;
+    float:left;
+    width:25%;
+    text-align:center;
+}
+.tab-nav a img{
+   
+    width:35%;
+   
+}
+.gameHot {
+    background-color: #fff; margin: 2% 0;
+}
+.gameHot ul {
+    list-style: none; margin: 0; padding: 0; padding: 1%;overflow:hidden;background-color:#eee;
+}
+.gameHot ul li{
+    padding:2% 0;border-bottom:1px dashed #eee;float:left;width:25%;text-align:center;background-color:#fff;
+}
+.gameHot ul li .a1{
+    width:70%;
+}
+.gameHot ul li .a2{
+    display:block;font-size:0.9em;
+}
+.gameHot ul li .a3{
+    font-size: 0.8em;color:#bbb;
+}
+.gameHot ul li .a4{
+   display: block; background-color: #216327; padding: 3%; color: #fff; font-weight: bold; margin: 0 auto; width: 90%;
+}
+.giftHot {
+    background-color: #fff; margin: 2% 0;
+}
+.giftHot ul{
+    list-style: none; margin: 0; padding: 0; padding: 1%;overflow:hidden;
+}
+.giftHot ul li{
+    padding:6% 0;border-bottom:1px dashed #eee;float:left;width:100%;background-color:#fff;
+}
+.giftHot ul li a{
+    overflow:hidden;
+}
+.giftHot ul li a .a1{
+    float:left;width:18%;
+}
+.giftHot ul li a .a2{
+    float:left;width:59%;margin-left:3%;
+}
+.giftHot ul li a .a2 .i{
+   display: block; font-weight: bold; margin-bottom: 3%;color:#666;
+}
+.giftHot ul li a .a2 .c{
+   display: block; font-size: 0.8em; color: #6e6e6e;
+}
+.giftHot ul li a .a3{
+    width: 16%; margin: 2%;float:left;
+}
+.giftHot ul li a .a3 span{
+    color: #fff; background-color: #216327; padding: 22% 3%; border-radius: 8px; display: block; text-align: center;
+}
+.ContectType .a2 img.check{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    width: 20%;
+}

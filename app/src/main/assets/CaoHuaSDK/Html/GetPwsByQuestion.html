@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="plugin/jquery.idcode/jquery.idcode.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/public.js"></script>
+    <title>通过密保问题找回</title>
+</head>
+<body>
+    <div id="wrap">
+        <div class="nav">
+            <a href="javascript:">返回</a>
+            <h3>通过密保问题找回</h3>
+        </div>
+        <div class="editWrap">
+            <div class="editForm" style="padding-top:5%">
+                <div class="a1">
+                    <input id="question" style="background-color: #fff;" disabled id="answer" value="你的出生地在哪？" />
+                </div>
+                <div class="a1">
+                    <input id="question_answer" placeholder="请输入你的答案" id="answer" />
+                </div>
+                <div class="a1">
+                    <input type="password" placeholder="请输入你的新密码" id="password" />
+                </div>
+                <div class="a1" style="padding-top:5%">
+                    <a class="btn" href="javascript:" onclick="verifyQuestion()">重置密码</a>
+                </div>
+            </div>
+            <div class="tip" style="line-height: 1.8;">
+                <h4 style="margin-top:5%">注：如果上述问题还没解决，请联系客服</h4>
+                <h4>客服中心:&nbsp;<a href="http://gm.caohua.com"><span>gm.caohua.com</span></a></h4>
+            </div>
+        </div>
+        <div class="Popup">
+            <div class="tit">
+                <h3>消息提示</h3>
+                <a href="javascript:" onclick="$('.cover').hide(); $('.Popup').hide()">
+                    <img src="img/close.jpg" />
+                </a>
+            </div>
+            <div class="a1">
+                <h4>请输入正确验证码</h4>
+            </div>
+            <div class="btnGroup">
+                <a id="linkBtn" href="javascript:" onclick="$('.cover').hide(); $('.Popup').hide()">确定</a>
+            </div>
+
+        </div>
+        <div class="cover"></div>
+    </div>
+    <script>
+        var question_text = filter(GetPwsByQuestion.getStorage('question_text'));
+        var qid = filter(GetPwsByQuestion.getStorage('qid'));
+        var username = filter(GetPwsByQuestion.getStorage('username'));
+        var regx=/^[\w.]{6,16}$/;
+        $(function () {
+            $('#question').val(question_text);
+        });
+        function verifyQuestion() {
+            var question_answer = $('#question_answer').val();
+            if (question_answer.replace(/\s+/g, "")=='') {
+                ShowPopup('答案不合法');
+                return;
+            }
+            var passwd = $('#password').val();
+            if (passwd.length < 6 || passwd.length > 16 || !regx.test(passwd)) {
+                ShowPopup('密码不合法');
+                return;
+            }
+            //var json = '{ "code": 200, "msg": "\u6210\u529f", "data": { "mobile": "151****0221", "email": "", "question": { "qid": "", "question_text": "" } } }';
+            //handleAndroidResult(json);
+            //return;
+            ShowLoading();
+            var data = '{"username":"' + username + '","passwd":"' + passwd + '","question_answer":"' + question_answer + '"}';
+            GetPwsByQuestion.verifyQuestion(data);
+        }
+        function handleAndroidResult(json) {
+            HideLoading();
+            var result = eval('(' + json + ')');
+            if (result.code == '200') {
+                $('#linkBtn').attr('href', 'GetPwsList.html'); ShowPopup('成功');
+            } else {
+                ShowPopup(result.msg);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/ch_download_btn_img"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ch_download_restart"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ch_download_btn_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:text="下载"
+        android:textColor="@color/ch_white"
+        android:textSize="12sp" />
+</merge>

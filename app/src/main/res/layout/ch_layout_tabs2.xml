@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tabs_area"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/ch_white"
+    android:orientation="horizontal">
+
+    <com.culiu.mhvp.core.tabs.com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/ch_bbs_tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:pstsIndicatorColor="@color/ch_green" />
+
+    <TextView
+        android:id="@+id/ch_bbs_change_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:text="点击切换" />
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/ch_view_rank_recycle_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLength="5"
+            android:text="游戏名称"
+            android:textColor="@color/ch_red_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:id="@+id/ch_view_rank_recycle_item_icon"
+            android:layout_width="@dimen/ch_app_icon_size"
+            android:layout_height="@dimen/ch_app_icon_size"
+            android:scaleType="fitXY"
+            android:src="@drawable/ch_default_apk_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="2dp"
+        android:paddingTop="@dimen/ch_app_download_ll_margin_top"
+        android:paddingRight="2dp"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:id="@+id/ch_view_rank_recycle_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:lines="1"
+            android:text="策略 "
+            android:textColor="@color/ch_gray_black" />
+
+        <TextView
+            android:id="@+id/ch_view_rank_recycle_item_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="2"
+            android:layout_marginTop="5dp"
+            android:text="策略 "
+            android:textColor="@color/ch_text_hint" />
+
+        <com.caohua.games.ui.download.DownloadButton
+            android:id="@+id/ch_view_rank_recycle_item_btn"
+            android:layout_width="@dimen/ch_app_download_button_size"
+            android:layout_height="@dimen/ch_app_download_button_height_size"
+            android:background="@color/ch_color_download_normal_title"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="下载"
+            android:textColor="@color/ch_white" />
+    </LinearLayout>
+</merge>

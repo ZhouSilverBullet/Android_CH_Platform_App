@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chsdk.ui.widget.RiffEffectRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="10dp">
+
+            <com.caohua.games.ui.account.AccountHeadView
+                android:id="@+id/ch_post_content_item_user_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:imageWidth="48dp" />
+
+            <TextView
+                android:id="@+id/ch_post_content_item_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/ch_post_content_item_user_photo"
+                android:ellipsize="end"
+                android:maxLength="8"
+                android:text="黄大仙"
+                android:textColor="@color/ch_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ch_post_content_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/ch_post_content_item_user_photo"
+                android:layout_alignBottom="@+id/ch_post_content_item_user_photo"
+                android:layout_marginBottom="4dp"
+                android:text="03-22 12:33"
+                android:textColor="@color/ch_gray_black" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ch_post_content_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="今天的天气不错啊今天的天气不错啊今天的天气不错啊今天的天气不错啊今天的天气不错啊"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/ch_post_content_item_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="3">
+
+            <com.caohua.games.ui.bbs.SquareImageView
+                android:id="@+id/ch_post_content_item_image_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ch_add_img"
+                android:visibility="gone" />
+
+            <com.caohua.games.ui.bbs.SquareImageView
+                android:id="@+id/ch_post_content_item_image_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ch_add_img"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/ch_post_content_item_rl_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <com.caohua.games.ui.bbs.SquareImageView
+                    android:id="@+id/ch_post_content_item_image_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ch_add_img"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/ch_post_content_item_image_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/ch_black_alpha_111"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="共5张图" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/ch_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ch_post_content_item_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="大神推荐"
+                android:textColor="@color/ch_text_hint" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/ch_bottom_emoji_favor_normal" />
+
+                    <TextView
+                        android:id="@+id/ch_post_content_item_upvote_total"
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:text="22"
+                        android:textColor="@color/ch_text_hint" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/ch_prefecture_comment" />
+
+                    <TextView
+                        android:id="@+id/ch_post_content_item_comment_total"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="22"
+                        android:textColor="@color/ch_text_hint" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</com.chsdk.ui.widget.RiffEffectRelativeLayout>

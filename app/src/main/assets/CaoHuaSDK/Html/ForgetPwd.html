@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="plugin/jquery.idcode/jquery.idcode.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="plugin/jquery.idcode/jquery.idcode.js"></script>
+    <script src="js/public.js"></script>
+    <title>找回密码</title>
+</head>
+<body>
+    <div id="wrap">
+        <div class="nav">
+            <a href="javascript:">返回</a>
+            <h3>找回密码</h3>
+        </div>
+        <div class="editWrap">
+            <div class="editForm">
+                <div class="a1">
+                    <input placeholder="请输入账号" id="username" />
+                </div>
+                <div class="a1" style="overflow:hidden">
+                    <input type="Captcha" id="Txtidcode" class="Captcha txtVerification a2" name="Captcha" placeholder="请输入验证码">
+                    <span id="idcode" style="float: right; margin-top: 2px;"></span>
+                </div>
+                <div class="a1">
+                    <a class="btn" href="javascript:" onclick="Submit()">提 交</a>
+                </div>
+            </div>
+            <div class="tip">
+                <h3>温馨提示</h3>
+                <h4>若通过以上途径无法找回密码，或者忘记账号，请联系客服，客服中心:&nbsp;<a href="http://gm.caohua.com"><span>gm.caohua.com</span></a></h4>
+            </div>
+        </div>
+        <div class="Popup">
+            <div class="tit">
+                <h3>消息提示</h3>
+                <a href="javascript:" onclick="$('.cover').hide(); $('.Popup').hide()">
+                    <img src="img/close.jpg" />
+                </a>
+            </div>
+            <div class="a1">
+                <h4>请输入正确验证码</h4>
+            </div>
+            <div class="btnGroup">
+                <a id="linkBtn" href="javascript:" onclick="$('.cover').hide(); $('.Popup').hide()">确定</a>
+            </div>
+
+        </div>
+        <div class="loading">
+            <img width="100%" src="img/loadingBar.gif" />
+        </div>
+        <div class="cover"></div>
+    </div>
+    <script>
+        window.onload = function () {
+            $.idcode.setCode();
+            SetFontSize();
+            SetSreenSize();
+            $('.cover').css('height', String($(window).height()).replace('px', '') + 'px');
+        }
+        function Submit() {
+            var username = $('#username').val();
+            if (username.replace(/\s+/g, "") == '') {
+                ShowPopup('用户名不合法');
+                return;
+            }
+            if (!$.idcode.validateCode()) {
+                ShowPopup('验证码不正确');
+                return;
+            }
+            //var json = '{"code": 200,"msg": "\u6210\u529f","data":{"mobile": "151****0221","email": "225255@qq.com","question": {"qid": "45","question_text": ""}}}';
+            //handleAndroidResult(json);
+            //return;
+            ShowLoading();
+            var data = '{"username":"' + username + '"}';
+            ForgetPwd.gateWay(data);// 我调用安卓
+        }
+        // 安卓调用我
+        function handleAndroidResult(json) {
+            HideLoading();
+            var result = eval('(' + json + ')');
+            if (result.code == '200') {
+                var mobile = filter(result.data.mobile);
+                var email = filter(result.data.email);
+                var question = result.data.question;
+                if (mobile == '' && email == '' && filter(question.qid) == '') {
+                    ShowPopup("未查到绑定记录");
+                } else {
+				    ForgetPwd.setStorage('{"mobile":"'+mobile+'"}');
+                    ForgetPwd.setStorage('{"email":"'+email+'"}');
+                    ForgetPwd.setStorage('{"qid":"'+question.qid+'"}');
+                    ForgetPwd.setStorage('{"question_text":"'+question.question_text+'"}');
+                    ForgetPwd.setStorage('{"username":"'+$('#username').val()+'"}');
+                    window.location.href = 'GetPwsList.html';
+                }
+            } else {
+                ShowPopup(result.msg);
+            }
+        }
+    </script>
+</body>
+</html>

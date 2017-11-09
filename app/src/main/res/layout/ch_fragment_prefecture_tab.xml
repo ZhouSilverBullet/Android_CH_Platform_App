@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_gray"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.prefecture.InnerLoadListView
+        android:id="@+id/ch_prefecture_inner_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_gray"
+        android:divider="@color/ch_gray"
+        android:dividerHeight="1dp"
+        android:listSelector="#00000000" />
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_fragment_test_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:empty_des="暂无数据" />
+
+    <com.caohua.games.ui.widget.NoNetworkView
+        android:id="@+id/ch_prefecture_tab_no_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        app:bg="true" />
+
+    <com.caohua.games.ui.widget.CHTwoBallView
+        android:id="@+id/ch_prefecture_tab_download_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:visibility="gone" />
+</FrameLayout>

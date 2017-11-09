@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_gray"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:id="@+id/ch_activity_mine_wallet_pay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sub_activity_title_des="领券中心" />
+
+    <LinearLayout
+        android:id="@+id/ch_activity_mine_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ch_activity_mine_wallet_pay_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/ch_white"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ch_gift_serch"
+            android:tint="@color/ch_text_hint" />
+
+        <TextView
+            android:id="@+id/ch_activity_mine_search"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="惊喜“嗖”出来~"
+            android:textColor="@color/ch_text_hint"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/ch_coupon_center_swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_mine_search_layout">
+
+        <com.caohua.games.ui.widget.refresh.CHRadarHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/ch_coupon_center_bottom_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ch_coupon_list_bg"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="10dp"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:listSelector="#00000000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scrollbars="none" />
+
+        <com.caohua.games.ui.widget.refresh.CHRadarFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_coupon_center_bottom_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_mine_search_layout"
+        android:visibility="gone" />
+
+    <com.caohua.games.ui.widget.NoNetworkView
+        android:id="@+id/ch_coupon_center_bottom_no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.caohua.games.ui.download.DownloadButton
+        android:id="@+id/ch_coupon_center_gone_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ch_coupon_center_download_progress_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@id/ch_activity_bbs_title_fl"-->
+    <!--android:background="@color/ch_white"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="visible">-->
+
+    <!--<ProgressBar-->
+    <!--android:id="@+id/ch_coupon_center_progress_img"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:indeterminateDrawable="@anim/ch_anim_rotate_cycle"-->
+    <!--android:indeterminateDuration="1000" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="加载中..." />-->
+    <!--</LinearLayout>-->
+    <com.caohua.games.ui.widget.BlankLoginView
+        android:id="@+id/ch_coupon_center_blank_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_mine_wallet_pay_layout" />
+
+    <com.caohua.games.ui.widget.CHTwoBallView
+        android:id="@+id/ch_coupon_center_two_ball"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_mine_wallet_pay_layout" />
+</RelativeLayout>

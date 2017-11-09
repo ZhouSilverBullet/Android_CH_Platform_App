@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_home_pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.caohua.games.ui.search.HomeSearchTitle
+            android:id="@+id/ch_home_search_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.caohua.games.ui.widget.NoScrollViewPager
+            android:id="@+id/home_pager_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ch_transparent" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffeeeeee" />
+
+    <include layout="@layout/ch_home_pager_bottom" />
+</LinearLayout>

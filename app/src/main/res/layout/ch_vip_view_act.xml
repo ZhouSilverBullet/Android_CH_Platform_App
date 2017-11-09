@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.caohua.games.ui.vip.widget.VipTitleView
+        android:id="@+id/ch_view_vip_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:moreTextValue="查看更多"
+        app:nameTextValue="专属活动" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ch_gray" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <com.chsdk.ui.widget.RiffEffectImageButton
+            android:id="@+id/ch_view_vip_icon_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ch_default_pic" />
+
+        <com.chsdk.ui.widget.RiffEffectImageButton
+            android:id="@+id/ch_view_vip_icon_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ch_default_pic" />
+    </LinearLayout>
+
+    <com.chsdk.ui.widget.RiffEffectImageButton
+        android:id="@+id/ch_view_vip_icon_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/ch_default_pic" />
+
+    <View
+        android:id="@+id/ch_vip_reward_item_divider4"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/ch_gray" />
+</merge>

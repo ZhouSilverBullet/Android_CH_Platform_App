@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ch_prefecture_container_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_gray">
+
+        <LinearLayout
+            android:id="@+id/ch_prefecture_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="15dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ch_account"
+                    android:visibility="invisible" />
+
+                <!--<ImageView-->
+                <!--android:id="@+id/ch_prefecture_msg"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:padding="7dp"-->
+                <!--android:src="@drawable/ch_bbs_message_right_icon" />-->
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ch_prefecture_edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="20dp"
+            android:src="@drawable/ch_publish_icon" />
+
+        <com.caohua.games.ui.widget.EmptyView
+            android:id="@+id/ch_prefecture_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ch_white"
+            android:visibility="gone"
+            app:empty_des="暂无数据" />
+
+        <com.caohua.games.ui.widget.CHTwoBallView
+            android:id="@+id/ch_prefecture_download_progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

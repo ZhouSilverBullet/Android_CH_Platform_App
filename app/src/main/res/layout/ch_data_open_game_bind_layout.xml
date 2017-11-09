@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/ch_white"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ch_data_open_game_bind_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ch_account" />
+
+    <TextView
+        android:id="@+id/ch_data_open_game_bind_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/ch_data_open_game_bind_icon"
+        android:text="大风起西云飞扬丶"
+        android:textColor="@color/ch_black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/ch_data_open_game_bind_qufu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ch_data_open_game_bind_name"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/ch_data_open_game_bind_icon"
+        android:text="角色区服"
+        android:textColor="@color/ch_black"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/ch_data_open_game_bind_btn"
+        android:layout_width="61dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/download_button_shape_normal"
+        android:text="切换"
+        android:textColor="@color/ch_white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ch_data_open_game_bind_level"
+        android:layout_width="35dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/ch_data_open_game_bind_name"
+        android:background="@drawable/ch_data_open_game_bind_bg"
+        android:gravity="center"
+        android:text="LV12"
+        android:textColor="@color/ch_green"
+        android:textSize="10sp" />
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_dialog_pull_down_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="@drawable/ch_dialog_pop_user_list_bg" >
+
+    <TextView
+        android:id="@+id/ch_list_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="19dp"
+        android:layout_toLeftOf="@+id/ch_list_delete"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/ch_black" />
+
+    <ImageView
+        android:id="@+id/ch_list_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:paddingRight="12dp"
+        android:src="@drawable/ch_dialog_list_close" />
+
+</RelativeLayout>

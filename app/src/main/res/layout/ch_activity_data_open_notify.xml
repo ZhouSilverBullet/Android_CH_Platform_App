@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.caohua.games.ui.dataopen.widget.DataOpenNotifySwitchListView
+            android:id="@+id/ch_data_open_notify_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.caohua.games.ui.dataopen.widget.DataOpenBindGridView
+            android:id="@+id/ch_data_open_notify_bind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.caohua.games.ui.dataopen.widget.DataOpenNotifyRuleView
+            android:id="@+id/ch_data_open_notify_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

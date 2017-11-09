@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/ch_vip_common_item_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/ch_gray" />
+
+    <com.caohua.games.ui.vip.widget.VipTitleView
+        android:id="@+id/ch_data_open_hint_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:moreTextValue="开启提示"
+        app:nameTextLeftIcon="true"
+        app:nameTextValue="重要信息提示" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ch_gray"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/ch_data_open_hint_title_des_string"
+        android:textColor="@color/ch_text_hint"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ch_data_open_hint_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ch_gray"
+        android:padding="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/ch_gray" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/ch_white" />
+</LinearLayout>

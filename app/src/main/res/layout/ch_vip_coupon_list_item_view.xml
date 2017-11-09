@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/ch_vip_coupon_list_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ch_vip_coupon_list_item_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200￥"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/ch_coupon_number_text_color"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/ch_vip_coupon_list_item_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ch_coupon_num_text_bg"
+            android:includeFontPadding="false"
+            android:text="满1000可用"
+            android:textColor="@color/ch_coupon_number_text_color"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ch_vip_coupon_list_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ch_vip_coupon_list_item_layout"
+        android:text="红色复仇礼包劵"
+        android:textColor="@color/ch_black" />
+
+    <Button
+        android:id="@+id/ch_vip_coupon_list_item_btn"
+        android:layout_width="60dp"
+        android:layout_height="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ch_vip_draw_button_bg"
+        android:text="领取"
+        android:textColor="@color/ch_white"
+        android:textSize="15sp" />
+</RelativeLayout>

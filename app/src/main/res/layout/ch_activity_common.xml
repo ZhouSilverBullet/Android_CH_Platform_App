@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:id="@+id/ch_activity_common_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/ch_activity_common_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_common_title_view">
+
+        <com.caohua.games.ui.widget.refresh.CHRadarHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/ch_activity_common_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.caohua.games.ui.widget.refresh.CHRadarFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/ch_activity_common_progress"
+        style="@style/ch_progress_circle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDuration="800"
+        android:visibility="gone" />
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_activity_common_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_common_title_view"
+        android:background="@color/ch_white" />
+
+    <com.caohua.games.ui.widget.BlankLoginView
+        android:id="@+id/ch_activity_common_blank_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_common_title_view" />
+
+    <com.caohua.games.ui.widget.NoNetworkView
+        android:id="@+id/ch_activity_common_no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

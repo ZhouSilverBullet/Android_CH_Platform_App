@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.caohua.games.ui.widget.HomeSubTitleView
+        android:id="@+id/ch_view_hot"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.caohua.games.ui.widget.ScrollGridView
+        android:id="@+id/ch_view_hot_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ch_transparent"
+        android:cacheColorHint="@color/ch_transparent"
+        android:horizontalSpacing="1dp"
+        android:listSelector="@color/ch_transparent"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:verticalSpacing="1dp" />
+</merge>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_activity_send_edit_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ch_home_title_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/ch_home_title_bg">
+
+            <ImageView
+                android:id="@+id/ch_activity_send_edit_finish"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:src="@drawable/ch_user_center_left_icon_back" />
+
+            <TextView
+                android:id="@+id/ch_send_edit_top_title"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="发表帖子"
+                android:textColor="@color/ch_white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ch_activity_send_edit_send"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/ch_activity_send_dark"
+                android:text="发布"
+                android:textColor="@color/ch_white" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0EFF4" />
+
+        <RelativeLayout
+            android:id="@+id/ch_activity_send_tag_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ch_activity_send_tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:gravity="start|center"
+                android:paddingLeft="10dp"
+                android:text="标签:"
+                android:textColor="@color/ch_gray_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/ch_activity_send_tag_value"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_toLeftOf="@+id/ch_activity_send_tag_img"
+                android:layout_toRightOf="@+id/ch_activity_send_tag_tv"
+                android:gravity="start|center"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/ch_black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/ch_activity_send_tag_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/ch_common_title_more" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/ch_activity_send_edit_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0EFF4" />
+
+        <EditText
+            android:id="@+id/ch_activity_send_edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:hint="标题(30个汉字以内)"
+            android:inputType="text"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:textColor="@color/ch_black"
+            android:textColorHint="@color/ch_text_hint"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ch_activity_send_edit_title"
+            android:background="#F0EFF4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <AutoCompleteTextView
+                android:id="@+id/ch_activity_send_autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:fadeScrollbars="true"
+                android:gravity="start"
+                android:hint="请输入不低于10个字符长度的正文"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                android:textColor="@color/ch_black"
+                android:textColorHint="@color/ch_text_hint"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/ch_activity_send_edit_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ch_gray"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/ch_activity_send_edit_selector_pic"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ch_publish_choose_pic" />
+
+                <ImageView
+                    android:id="@+id/ch_activity_send_edit_selector_camera"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ch_publish_camera" />
+
+                <ImageView
+                    android:id="@+id/ch_activity_send_edit_selector_emoji"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ch_publish_emoj" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ch_activity_send_edit_outer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ch_activity_send_edit_gallery_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ch_activity_send_edit_gallery_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:id="@+id/ch_activity_send_edit_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="已选1张还剩9张可选择"
+                    android:textColor="@color/ch_black_alpha_128"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ch_activity_send_edit_emoji_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/ch_activity_send_edit_emoji_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

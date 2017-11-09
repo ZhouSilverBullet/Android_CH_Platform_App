@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ch_home_title_bg"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:sub_activity_title_des="账号设置" />
+
+    <ScrollView
+        android:background="@color/ch_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ch_white"
+            android:clipToPadding="true"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+
+            <LinearLayout
+                android:id="@+id/ch_activity_account_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/ch_gray"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <com.caohua.games.ui.account.AccountSettingTextView
+                    android:id="@+id/ch_account_setting_item_account_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ch_pressd_bg"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:saveEnabled="false"
+                    app:Ac_item_des="未设置"
+                    app:Ac_item_icon="@drawable/ch_common_title_more"
+                    app:Ac_item_title="账号" />
+
+                <com.caohua.games.ui.account.AccountSettingEditView
+                    android:id="@+id/ch_activity_accountsetting_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/ch_white"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    app:Ac_edit_des="未设置"
+                    app:Ac_edit_icon="@drawable/ch_common_title_more"
+                    app:Ac_edit_title="昵称"
+                    app:Ac_edit_type="1" />
+
+
+                <com.caohua.games.ui.account.AccountSettingTextView
+                    android:id="@+id/ch_account_setting_item_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/ch_white"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    app:Ac_item_des="未设置"
+                    app:Ac_item_icon="@drawable/ch_common_title_more"
+                    app:Ac_item_title="性别" />
+
+                <com.caohua.games.ui.account.AccountSettingTextView
+                    android:id="@+id/ch_account_setting_item_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/ch_white"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    app:Ac_item_des="未设置"
+                    app:Ac_item_icon="@drawable/ch_common_title_more"
+                    app:Ac_item_title="生日" />
+
+                <com.caohua.games.ui.account.AccountSettingEditView
+                    android:id="@+id/ch_account_setting_item_QQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/ch_white"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    app:Ac_edit_des="未设置"
+                    app:Ac_edit_icon="@drawable/ch_common_title_more"
+                    app:Ac_edit_title="Q Q"
+                    app:Ac_edit_type="3" />
+
+                <com.caohua.games.ui.account.AccountSettingEditView
+                    android:id="@+id/ch_account_setting_item_adress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/ch_white"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    app:Ac_edit_des="未设置"
+                    app:Ac_edit_icon="@drawable/ch_common_title_more"
+                    app:Ac_edit_title="地址"
+                    app:Ac_edit_type="2" />
+
+                <com.caohua.games.ui.account.AccountSettingTextView
+                    android:id="@+id/ch_activity_setting_safe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ch_pressd_bg"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    app:Ac_item_des="进入安全设置"
+                    app:Ac_item_icon="@drawable/ch_common_title_more"
+                    app:Ac_item_title="安全" />
+
+                <Button
+                    android:id="@+id/ch_activity_setting_submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/ch_green"
+                    android:text="提 交"
+                    android:textColor="@color/ch_white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:background="@color/ch_black"
+              android:padding="0dp"
+              android:orientation="vertical">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:id="@+id/ch_activity_get_gift_details_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:sub_activity_title_des="战争指挥官"
+        app:sub_activity_title_text_color="@color/ch_white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF10131A"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/ch_activity_get_gift_details_icon"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ch_activity_get_gift_details_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    tools:text="经验药水*23、天启坦克*23、能量条*80"
+                    android:textColor="@color/ch_green"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ch_activity_get_gift_details_runtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="20dp"
+                    tools:text="有效期：2016.01.21 09:00:00"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ch_activity_get_gift_details_icon"
+                android:layout_width="@dimen/ch_app_gift_icon_size"
+                android:layout_height="@dimen/ch_app_gift_icon_size"
+                android:layout_gravity="center"
+                android:layout_marginTop="-50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ch_default_apk_icon" />
+        </FrameLayout>
+
+        <!--<TextView-->
+            <!--android:layout_marginLeft="40dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:textSize="18sp"-->
+            <!--android:text="使用方法：" />-->
+
+        <TextView
+            android:id="@+id/ch_activity_get_gift_details_user_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:ellipsize="end"
+            android:lines="3"
+            android:textColor="@color/ch_white"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:textSize="16sp"
+            android:id="@+id/ch_activity_get_gift_details_take_limit"
+            android:textColor="@color/ch_white"
+            />
+
+        <FrameLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@color/ch_gray_black"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                >
+                <com.caohua.games.ui.download.DownloadProgressButton
+                    android:id="@+id/ch_progress_button"
+                    android:layout_width="260dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:clickable="true"
+                    android:visibility="visible"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="50dp">
+                <com.chsdk.ui.widget.RippleEffectButton
+                    android:id="@+id/ch_activity_get_gift_details_gift_btn"
+                    android:layout_width="260dp"
+                    android:layout_height="50dp"
+                    android:background="@color/ch_color_download_normal_title"
+                    android:text="领取"
+                    android:visibility="gone"
+                    android:textSize="18sp"
+                    android:textColor="@color/ch_white" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_white">
+
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:id="@+id/ch_activity_game_center_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ch_black_alpha_title"
+        app:sub_activity_title_des="游戏中心" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ch_game_center_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_game_center_title" />
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_activity_game_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_game_center_title"
+        android:visibility="gone"
+        app:empty_des="暂无数据" />
+
+    <com.caohua.games.ui.widget.NoNetworkView
+        android:id="@+id/ch_activity_game_no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.caohua.games.ui.widget.CHTwoBallView
+        android:id="@+id/ch_activity_game_center_download_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_game_center_title" />
+</RelativeLayout>

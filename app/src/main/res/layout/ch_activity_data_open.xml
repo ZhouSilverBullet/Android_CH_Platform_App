@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/ch_gray"
+    android:layout_height="match_parent">
+
+    <com.caohua.games.ui.download.DownloadButton
+        android:id="@+id/ch_activity_data_open_gone_button"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.caohua.games.ui.dataopen.widget.DataOpenGameBindLayout
+                android:id="@+id/ch_activity_data_open_bind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.caohua.games.ui.dataopen.widget.DataOpenGiftInfoLayout
+                android:id="@+id/ch_activity_data_open_gift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.caohua.games.ui.dataopen.widget.DataOpenActListView
+                android:id="@+id/ch_activity_data_open_act"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.caohua.games.ui.dataopen.widget.DataOpenHintView
+                android:id="@+id/ch_activity_data_open_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/ch_data_open_rl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/ch_white">
+
+        <View
+            android:id="@+id/ch_data_open_rl_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/ch_gray" />
+
+        <Button
+            android:id="@+id/ch_data_open_rl_open_game"
+            android:layout_width="74dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/download_button_shape_downloading"
+            android:text="启动游戏"
+            android:textColor="@color/ch_white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ch_data_open_rl_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/ch_data_open_rl_open_game"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="能量不够用，从草花app启动游戏送能量啦！"
+            android:textColor="@color/ch_black" />
+
+    </RelativeLayout>
+</RelativeLayout>

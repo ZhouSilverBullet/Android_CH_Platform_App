@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ch_dialog_data_open_server_alert_recycler"
+        android:layout_width="320dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#88d1d1d1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ch_dialog_data_open_server_alert_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ch_dialog_app_layout_left_btn_selector"
+            android:text="退出"
+            android:textColor="@color/ch_black" />
+
+        <View
+            android:layout_width="0.1px"
+            android:layout_height="match_parent"
+            android:background="@color/ch_gray" />
+
+        <Button
+            android:id="@+id/ch_dialog_data_open_server_alert_ok"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ch_dialog_app_layout_right_btn_select"
+            android:text="确定"
+            android:textColor="@color/ch_black" />
+    </LinearLayout>
+</LinearLayout>

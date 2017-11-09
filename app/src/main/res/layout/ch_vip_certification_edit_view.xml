@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ch_activity_vip_certification_edit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="QQ号码："
+        android:textColor="@color/ch_black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/ch_activity_vip_certification_edit_name_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="QQ号码："
+        android:textColor="@color/ch_black"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/ch_activity_vip_certification_edit_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/ch_activity_vip_certification_edit_name"
+        android:background="@null"
+        android:hint="(不能为空)"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/ch_black"
+        android:textColorHint="@color/ch_text_hint"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/ch_activity_vip_certification_edit_btn"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ch_vip_certification_btn_bg"
+        android:text="发送"
+        android:textColor="@drawable/ch_vip_certification_btn_text_bg"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ch_activity_vip_certification_edit_value"
+        android:layout_marginTop="5dp"
+        android:background="@color/ch_gray" />
+</RelativeLayout>

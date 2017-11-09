@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:id="@+id/ch_activity_mine_game_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sub_activity_title_des="我的游戏" />
+
+    <View
+        android:id="@+id/ch_activity_mine_game_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ch_activity_mine_game_title"
+        android:background="#e2e2e2" />
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_mine_game_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_mine_game_line"
+        android:visibility="gone"
+        app:empty_des="加载数据失败,请检查网络状况后点击重试" />
+
+    <com.caohua.games.ui.widget.NoNetworkView
+        android:id="@+id/ch_mine_game_no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/ch_activity_mine_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_mine_game_line">
+
+        <com.caohua.games.ui.widget.refresh.CHRadarHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ch_activity_mine_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

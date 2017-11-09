@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:background="@color/ch_gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.caohua.games.ui.vip.more.VipRebateGiftListView
+                android:id="@+id/ch_vip_recharge_gift_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--<View-->
+                <!--android:id="@+id/ch_vip_reward_item_divider6"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="8dp"-->
+                <!--android:background="@color/ch_gray" />-->
+
+            <com.caohua.games.ui.vip.more.VipCouponListView
+                android:id="@+id/ch_vip_coupon_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.vip.widget.VipTitleView
+        android:id="@+id/ch_vip_reward_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:moreTextValue="查看更多"
+        app:nameTextValue="VIP福利" />
+
+    <View
+        android:id="@+id/ch_vip_reward_item_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ch_gray" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ch_vip_reward_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/ch_vip_reward_item_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/ch_gray" />
+</LinearLayout>

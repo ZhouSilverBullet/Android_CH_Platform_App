@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.caohua.games.ui.prefecture.InnerLoadListView
+        android:id="@+id/ch_activity_tiezi_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_gray"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="8dp"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:scrollbars="none" />
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_fragment_tie_zi_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:empty_des="暂无数据" />
+
+    <com.caohua.games.ui.widget.BlankLoginView
+        android:id="@+id/ch_fragment_tie_zi_blank_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

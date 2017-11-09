@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <GridView
+        android:id="@+id/ch_bbs_selector_pop_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:verticalSpacing="10dp" />
+
+    <com.chsdk.ui.widget.RippleEffectButton
+        android:id="@+id/ch_bbs_selector_pop_button"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/download_button_shape_downloading"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/ch_white"
+        android:textSize="12sp" />
+</LinearLayout>

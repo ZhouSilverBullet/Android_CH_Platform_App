@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:id="@+id/ch_activity_prefecture_list_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <com.caohua.games.ui.prefecture.PrefectureListTabView
+        android:id="@+id/ch_activity_prefecture_list_tab_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ch_activity_prefecture_list_title_view" />
+
+    <com.caohua.games.ui.widget.BottomLoadListView
+        android:id="@+id/ch_activity_prefecture_list_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_prefecture_list_tab_view"
+        android:background="@color/ch_gray"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:scrollbars="none" />
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_activity_prefecture_list_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_prefecture_list_tab_view"
+        android:visibility="gone"
+        app:empty_des="暂无数据" />
+
+    <com.caohua.games.ui.widget.NoNetworkView
+        android:id="@+id/ch_activity_prefecture_list_no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_prefecture_list_tab_view" />
+
+    <com.caohua.games.ui.widget.CHTwoBallView
+        android:id="@+id/ch_activity_prefecture_list_two_ball"
+        android:layout_below="@id/ch_activity_prefecture_list_tab_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

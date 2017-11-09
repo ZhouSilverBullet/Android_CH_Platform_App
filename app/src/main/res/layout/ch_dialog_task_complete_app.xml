@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ch_task_complete_quit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ch_complete_quit" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ch_dialog_task_describe_corner"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ch_task_complete_center_image" />
+
+        <TextView
+            android:id="@+id/ch_dialog_alert_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="任务完成"
+            android:textColor="@color/ch_color_download_normal_title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ch_task_comptele_left_dot"
+                android:tint="@color/ch_text_hint" />
+
+            <TextView
+                android:id="@+id/ch_dialog_alert_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="获得奖励如下"
+                android:textColor="@color/ch_color_login_bg"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ch_task_comptele_right_dot"
+                android:tint="@color/ch_text_hint" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:id="@+id/ch_task_ll"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/ch_caohua_task_describe_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ch_task_image1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ch_task_caohuadou_icon" />
+
+                    <TextView
+                        android:id="@+id/ch_task_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+20草花豆" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/ch_task_divider_1"
+                    android:layout_width="25dp"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/ch_caohua_task_describe_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_toRightOf="@+id/ch_task_divider_1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ch_task_image2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ch_task_caohuadou_icon" />
+
+                    <TextView
+                        android:id="@+id/ch_task_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+20草花豆" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ch_task_ll2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@+id/ch_task_ll"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ch_caohua_task_describe_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ch_task_image3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ch_task_caohuadou_icon" />
+
+                    <TextView
+                        android:id="@+id/ch_task_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+20草花豆" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/ch_task_divider_2"
+                    android:layout_width="25dp"
+                    android:layout_height="1dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/ch_caohua_task_describe_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/ch_task_image4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ch_task_caohuadou_icon" />
+
+                    <TextView
+                        android:id="@+id/ch_task_text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+2草花豆" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

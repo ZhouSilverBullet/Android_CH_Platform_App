@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="plugin/jquery.idcode/jquery.idcode.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/public.js"></script>
+    <title>通过密保邮箱找回</title>
+</head>
+<body>
+    <div id="wrap">
+        <div class="nav">
+            <a href="javascript:">返回</a>
+            <h3>通过密保邮箱找回</h3>
+        </div>
+       <div class="EmailVail" style="padding:3%">
+           <input id="IsSend" type="hidden" value="0" />
+           <h3>已向您的密保邮箱发送了密码修改邮件请在30分钟以内登陆邮箱验证！</h3>
+           <h4 class="sendCode">未收到邮件？请<span> 21 </span>秒后重新发送</h4>
+           <div class="a1" id="btn_email">
+               <a class="btn" href="javascript:" onclick="jumpEmail()">去邮箱验证</a>
+           </div>
+           <h5>注：如果上述问题还没有解决，请联系客服</h5>
+           <h5>客服中心:&nbsp;<a href="http://gm.caohua.com"><span>gm.caohua.com</span></a></h5>
+       </div>
+        <div class="Popup">
+            <div class="tit">
+                <h3>消息提示</h3>
+                <a href="javascript:" onclick="$('.cover').hide(); $('.Popup').hide()">
+                    <img src="img/close.jpg" />
+                </a>
+            </div>
+            <div class="a1">
+                <h4>请输入正确验证码</h4>
+            </div>
+            <div class="btnGroup">
+                <a id="linkBtn" href="javascript:" onclick="$('.cover').hide(); $('.Popup').hide()">确定</a>
+            </div>
+
+        </div>
+        <div class="cover"></div>
+    </div>
+    <script>
+        var email = filter(GetPwsByEmail.getStorage('email'));
+        var username = filter(GetPwsByEmail.getStorage('username'));
+        $(function () {
+            var data = '{"username":"' + username + '","email":"'+email+'"}';
+            var m = intEmail(email);
+            if (m == '') {
+                $('#btn_email').hide();
+            }
+            mbEmailCode();
+        })
+        function Countdown() {
+            $('#IsSend').val(1);
+            $('.sendCode').html('未收到邮件？请<span> 21 </span>秒后重新发送');
+            var sec = 21;
+            var time = setInterval(function () {
+                sec--; $('.sendCode span').text(sec);
+                if (sec == 0) {
+                    $('#IsSend').val(0);
+                    $('.sendCode').html('未收到邮件？<a href="javascript:" onclick="mbEmailCode()">重新发送邮件</a>');
+                    clearInterval(time);
+                }
+            }, 1000);
+        }
+        function mbEmailCode() {
+            Countdown();
+            var data = '{"username":"' + username + '","email":"'+email+'"}';
+            GetPwsByEmail.mbEmailCode(data);
+        }
+        function jumpEmail() {
+            var _email = intEmail(email);
+            window.location.href = 'http://'+_email;
+        }
+    </script>
+</body>
+</html>

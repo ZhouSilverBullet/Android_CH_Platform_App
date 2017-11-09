@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path path="Android/data/com.caohua.games.apps/" name="camera_image" />
+    <external-path path="." name="camera_image_root" />
+</paths>

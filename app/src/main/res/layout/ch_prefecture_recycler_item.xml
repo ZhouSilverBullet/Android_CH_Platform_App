@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chsdk.ui.widget.RiffEffectLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_prefecture_recycler_item_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/ch_prefecture_recycler_item_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ch_prefecture_icon_project" />
+
+    <TextView
+        android:id="@+id/ch_prefecture_recycler_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="专区"
+        android:textColor="@color/ch_black" />
+</com.chsdk.ui.widget.RiffEffectLinearLayout>

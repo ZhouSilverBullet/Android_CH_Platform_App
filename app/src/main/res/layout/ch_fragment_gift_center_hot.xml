@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/ch_fragment_gift_center_hot_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<com.caohua.games.ui.widget.CHRefreshHeaderView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp" />-->
+        <com.caohua.games.ui.widget.refresh.CHRadarHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ch_fragment_gift_center_hot_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.caohua.games.ui.widget.refresh.CHRadarFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    <com.caohua.games.ui.widget.EmptyView
+        android:id="@+id/ch_fragment_gift_center_hot_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.caohua.games.ui.widget.NoNetworkView
+        android:id="@+id/ch_fragment_gift_center_hot_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

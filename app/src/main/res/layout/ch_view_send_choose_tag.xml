@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@drawable/ch_shape_search_lines"
+    android:gravity="center_vertical">
+    <View
+        android:id="@+id/ch_view_send_choose_tag_cbx"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/ch_publish_check"/>
+
+    <TextView
+        android:id="@+id/ch_view_send_choose_tag_name"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="14sp"
+        android:textColor="@color/ch_green"
+        android:text="每日灌水"/>
+</LinearLayout>

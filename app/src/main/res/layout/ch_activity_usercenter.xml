@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_color_download_normal_title"
+    android:padding="0dp">
+
+    <com.caohua.games.ui.widget.KnowHeightScrollView
+        android:id="@+id/ch_usercenter_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_gray"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ch_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ch_usercenter_bg_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_account_bg"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <RelativeLayout
+                    android:id="@+id/ch_account_info_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ch_account_img_cover"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ch_account_official"
+                        android:visibility="gone" />
+
+                    <com.caohua.games.ui.account.AccountHeadView
+                        android:id="@+id/ch_view_usercenter_icon"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:id="@+id/ch_view_usercenter_off_text"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ch_view_usercenter_icon"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="-15dp"
+                        android:background="@drawable/ch_usercenter_official_bg"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingBottom="1dp"
+                        android:paddingTop="1dp"
+                        android:text="官方"
+                        android:textColor="@color/ch_white"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ch_view_usercenter_icon"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/ch_view_usercenter_accountnumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:onClick="onClick"
+                            android:text="未登录"
+                            android:textColor="@color/ch_white"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ch_view_usercenter_level_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ch_view_usercenter_icon"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ch_view_usercenter_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:onClick="onClick"
+                            android:text="未登录"
+                            android:textColor="@color/ch_white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ch_view_usercenter_level_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp"
+                            android:paddingRight="15dp"
+                            android:paddingTop="5dp"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp">
+
+                                <TextView
+                                    android:id="@+id/ch_account_level_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/ch_account_level_des"
+                                    android:layout_marginBottom="0dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/ch_usercenter_level_bg"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="4dp"
+                                    android:text="LV1"
+                                    android:textColor="@color/ch_white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:id="@+id/ch_account_level_des"
+                                    android:layout_width="18dp"
+                                    android:layout_height="16dp"
+                                    android:background="@drawable/ch_level_des" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/ch_account_level_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="3dp"
+                                android:lines="1"
+                                android:text="初来乍到"
+                                android:textColor="@color/ch_white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/ch_view_usercenter_forum_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/ch_usercenter_official_bg"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="草鸡版主"
+                                android:textColor="@color/ch_white"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ch_view_usercenter_vip_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ch_account_level_name_bg"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="5dp"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp">
+
+                            <View
+                                android:id="@+id/ch_account_vip_des"
+                                android:layout_width="18dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/ch_level_vip_des" />
+
+                            <TextView
+                                android:id="@+id/ch_account_vip_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/ch_account_vip_des"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginLeft="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="4dp"
+                                android:text="1"
+                                android:textColor="@color/ch_white"
+                                android:textSize="15sp"
+                                android:textStyle="bold|italic" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/ch_account_vip_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:text=""
+                            android:textColor="@color/ch_white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+            <include layout="@layout/ch_mine_pay_show_layout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_mine_game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="我的游戏"
+                app:account_item_icon="@drawable/ch_mine_game_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_gift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="我的礼包"
+                app:account_item_icon="@drawable/ch_mine_gift_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_mall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone"
+                app:account_item_des="商城"
+                app:account_item_icon="@drawable/ch_mall_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="消息记录"
+                app:account_item_icon="@drawable/ch_mine_message_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_mymsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="专区消息"
+                app:account_item_icon="@drawable/ch_mine_prefecture_commet_icon" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_h5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone"
+                app:account_item_des="H5小游戏"
+                app:account_item_icon="@drawable/ch_h5_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="我的评论"
+                app:account_item_icon="@drawable/ch_mine_discuss_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_my_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="我的发布"
+                app:account_item_icon="@drawable/ch_mine_public_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_vip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="会员中心"
+                app:account_item_icon="@drawable/ch_mine_vip_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_grow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="我的成长"
+                app:account_item_icon="@drawable/ch_mine_grow_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="我的收藏"
+                app:account_item_icon="@drawable/ch_mine_favorite_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.account.AccountItemView
+                android:id="@+id/ch_activity_usercenter_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="联系客服"
+                app:account_item_icon="@drawable/ch__mine_service_icon" />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+        </LinearLayout>
+    </com.caohua.games.ui.widget.KnowHeightScrollView>
+
+    <FrameLayout
+        android:id="@+id/ch_activity_usercenter_title_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ch_home_title_bg"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/ch_activity_usercenter_title_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="我的"
+            android:textColor="@color/ch_white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/ch_activity_usercenter_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.chsdk.ui.widget.RiffEffectImageButton
+            android:id="@+id/ch_activity_usercenter_skin"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@null"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ch_user_center_right_icon" />
+    </RelativeLayout>
+</FrameLayout>

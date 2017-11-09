@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.widget.SwitchView
+        android:id="@+id/ch_data_open_notify_switch_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/ch_data_open_notify_switch_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/ch_black"
+        android:layout_toLeftOf="@id/ch_data_open_notify_switch_view"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="11111111111111" />
+</RelativeLayout>

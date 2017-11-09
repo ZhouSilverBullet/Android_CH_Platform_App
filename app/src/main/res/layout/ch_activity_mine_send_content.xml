@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ch_black_alpha_title"
+        app:sub_activity_title_des="我的发布" />
+
+    <com.culiu.mhvp.core.tabs.com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/ch_activity_mine_content_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:pstsMatchExpand="true" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ch_activity_mine_content_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.vip.widget.VipTitleView
+        android:id="@+id/ch_vip_view_recharge_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:moreTextValue="查看更多"
+        app:nameTextValue="充值优惠" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ch_gray" />
+
+    <com.chsdk.ui.widget.RiffEffectRelativeLayout
+        android:id="@+id/ch_vip_view_recharge_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ch_vip_view_recharge_end"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ch_vip_view_recharge_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ch_default_apk_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/ch_vip_view_recharge_icon"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:id="@+id/ch_vip_view_recharge_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="坦克前线充值返利"
+                        android:textColor="@color/ch_black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ch_vip_view_recharge_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/ch_vip_rebate_gift_btn_bg"
+                        android:includeFontPadding="false"
+                        android:padding="2dp"
+                        android:text="LV5级以上"
+                        android:textColor="@color/ch_white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/ch_vip_view_recharge_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="最高返利200%"
+                    android:textColor="@color/ch_vip_draw_btn_color" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ch_vip_view_recharge_end"
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ch_vip_draw_button_not_auth_bg"
+            android:gravity="center"
+            android:text="已结束"
+            android:textColor="@color/ch_white"
+            android:textSize="15sp" />
+    </com.chsdk.ui.widget.RiffEffectRelativeLayout>
+
+    <View
+        android:id="@+id/ch_vip_view_recharge_center_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ch_gray" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ch_vip_recharge_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/ch_vip_reward_item_divider3"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/ch_gray" />
+</LinearLayout>

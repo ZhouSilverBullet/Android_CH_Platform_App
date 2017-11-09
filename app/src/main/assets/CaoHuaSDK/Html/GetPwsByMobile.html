@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="plugin/jquery.idcode/jquery.idcode.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/public.js"></script>
+    <title>通过密保手机找回</title>
+</head>
+<body>
+    <div id="wrap">
+        <div class="nav">
+            <a href="javascript:">返回</a>
+            <h3>通过密保手机找回</h3>
+        </div>
+        <div class="editWrap">
+            <h3 class="t1">需要验证您绑定的手机：<span id="mobile">181****1878</span></h3>
+            <div class="editForm">
+                <div class="a1" style="overflow:hidden">
+                    <input id="auth_code" class="a2" placeholder="请输入验证码">
+                    <a class="sendCode" href="javascript:" style="float:left;margin-left:3%" onclick="mbMobileCode()">发送验证码</a>
+                </div>
+                <div class="a1">
+                    <input id="IsSend" type="hidden" value="0" />
+                    <input type="password" placeholder="请输入新密码" id="password" />
+                </div>
+                <div class="a1">
+                    <a class="btn" href="javascript:" onclick="mbVerifyMcode()">重置密码</a>
+                </div>
+            </div>
+            <div class="tip" style="line-height: 1.8;">
+                <h3>收到验证码？</h3>
+                <h4>1.请核对您的手机号是否正确</h4>
+                <h4>2.请确定是否设置了黑名单拦截</h4>
+                <h4>3.您的手机是否欠费停机或运营商屏蔽，如果是，请缴纳费用或联系运营商</h4>
+                <h4 style="margin-top:5%">注：如果上述问题还没解决，请联系客服</h4>
+                <h4>客服中心:&nbsp;<a href="http://gm.caohua.com"><span>gm.caohua.com</span></a></h4>
+            </div>
+        </div>
+        <div class="Popup">
+            <div class="tit">
+                <h3>消息提示</h3>
+                <a href="javascript:" onclick="$('.cover').hide(); $('.Popup').hide()">
+                    <img src="img/close.jpg" />
+                </a>
+            </div>
+            <div class="a1">
+                <h4>请输入正确验证码</h4>
+            </div>
+            <div class="btnGroup">
+                <a id="linkBtn" href="javascript:" onclick="$('.cover').hide(); $('.Popup').hide()">确定</a>
+            </div>
+
+        </div>
+        <div class="cover"></div>
+        <script>
+            var mobile = filter(GetPwsByMobile.getStorage('mobile'));
+            var username = filter(GetPwsByMobile.getStorage('username'));
+            var regx=/^[\w.]{6,16}$/;
+            $(function () {
+                mobile = mobile.substr(0, 3) + '****' + mobile.substr(7, 4);
+                $('#mobile').text(mobile);
+            });
+            function mbMobileCode() {
+                if ($('#IsSend').val() == '0') {
+                    Countdown();
+                    var data = '{"username":"' + username + '"}';
+                    GetPwsByMobile.mbMobileCode(data);
+                }
+            }
+            function mbVerifyMcode() {
+                var auth_code = $('#auth_code').val();
+                if (auth_code == '') {
+                    ShowPopup('验证码不合法');
+                    return;
+                }
+                var passwd = $('#password').val();
+                if (passwd.length < 6 || passwd.length > 16 || !regx.test(passwd)) {
+                    ShowPopup('密码不合法');
+                    return;
+                }
+                //var json = '{ "code": 200, "msg": "\u6210\u529f", "data": { "mobile": "151****0221", "email": "", "question": { "qid": "", "question_text": "" } } }';
+                //handleAndroidResult(json);
+                //return;
+                ShowLoading();
+                var data = '{"username":"' + username + '","auth_code":"' + auth_code + '","passwd":"' + passwd + '"}';
+                GetPwsByMobile.mbVerifyMcode(data);
+            }
+            function Countdown() {
+                $('#IsSend').val(1);
+                $('.sendCode').css({
+                    'background-color':'#eee','color':'#666'
+                });
+                $('.sendCode').html('重新发送(<span>30</span>秒)');
+                var sec = 30;
+                var time = setInterval(function () {
+                    sec--; $('.sendCode span').text(sec);
+                    if (sec == 0) {
+                        $('#IsSend').val(0);
+                        $('.sendCode').css({
+                            'background-color': '#fff', 'color': '#26bc5b'
+                        });
+                        $('.sendCode').html('发送验证码');
+                        clearInterval(time);
+                    }
+                }, 1000);
+            }
+            // 安卓调用我
+            function handleAndroidResult(json) {
+                HideLoading();
+                result = eval('(' + json + ')');
+                if (result.code == '200') {
+                    $('#linkBtn').attr('href', 'GetPwsList.html');ShowPopup('重置成功');
+                } else {
+                    ShowPopup(result.msg);
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ch_home_title_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:id="@+id/ch_web_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ch_home_title_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/ch_web_title_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/ch_user_center_left_icon_back" />
+
+            <TextView
+                android:id="@+id/ch_web_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="60dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/ch_white"
+                android:textSize="20sp" />
+
+            <com.chsdk.ui.widget.RiffEffectImageButton
+                android:id="@+id/ch_web_image_more"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ch_activity_proxy_right_more"
+                android:visibility="invisible" />
+
+            <com.chsdk.ui.widget.RiffEffectImageButton
+                android:id="@+id/ch_web_image_collect"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ch_proxy_collect_selector_n"
+                android:visibility="invisible" />
+
+            <com.chsdk.ui.widget.RiffEffectImageButton
+                android:id="@+id/ch_web_image_faq"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ch_pay_question"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ch_web_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ch_emoji_rl_bottom"
+        android:layout_below="@+id/ch_web_title_bar"
+        android:background="@color/ch_white"
+        android:windowSoftInputMode="adjustResize">
+
+        <ProgressBar
+            android:id="@+id/ch_web_progress"
+            style="@style/ch_style_horizontal_progress"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:indeterminate="false"
+            android:max="100" />
+
+        <com.caohua.games.ui.widget.TwoBallRotationProgressBar
+            android:id="@+id/ch_web_progress_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <com.caohua.games.ui.widget.BlankLoginView
+        android:id="@+id/ch_web_blank_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ch_web_title_bar" />
+
+    <!-- 聊天输入框 -->
+    <include
+        android:id="@+id/ch_emoji_rl_bottom"
+        layout="@layout/ch_custom_facerelativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/ch_web_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/ch_emoji_rl_bottom"
+        android:layout_toRightOf="@+id/ch_emoji_rl_bottom"
+        android:windowSoftInputMode="adjustResize" />
+
+</RelativeLayout>

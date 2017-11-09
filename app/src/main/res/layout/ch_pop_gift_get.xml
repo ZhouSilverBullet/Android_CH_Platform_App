@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_pop_get_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#aa000000"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:id="@+id/ch_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ch_pop_spacking"
+        android:layout_marginRight="@dimen/ch_pop_spacking"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:paddingBottom="40dp"
+        android:background="@drawable/ch_pop_gift_bg">
+
+        <ImageView
+            android:id="@+id/ch_pop_close"
+            android:layout_width="25dp"
+            android:paddingTop="2dp"
+            android:paddingRight="2dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ch_pop_gift_close" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="20dp"
+            android:src="@drawable/ch_pop_gift_success" />
+
+        <TextView
+            android:textColor="@color/main_green"
+            android:id="@+id/ch_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:paddingTop="50dp"
+            android:text="兑换码已保存，可在我的礼包中查询，请尽快使用，否则会进入淘号" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ch_tv"
+            >
+
+            <TextView
+                android:textColor="@color/ch_white"
+                android:id="@+id/ch_pop_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="2"
+                android:background="@color/ch_pop_gift_bg"
+                android:gravity="center_horizontal"
+                android:lines="1"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="235445413245" />
+
+            <com.chsdk.ui.widget.RippleEffectButton
+                android:id="@+id/ch_pop_get_copy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/ch_pop_id"
+                android:layout_weight="1"
+                android:background="@drawable/download_button_shape_pause"
+                android:gravity="center_horizontal"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="复制"
+                android:textColor="@color/ch_white" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

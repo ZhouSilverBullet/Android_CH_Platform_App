@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chsdk.ui.widget.RiffEffectRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ch_white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ch_gift_center_hot_item_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ch_default_apk_icon" />
+
+    <TextView
+        android:id="@+id/ch_gift_center_hot_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/ch_gift_center_hot_item_icon"
+        android:text="等级大礼包"
+        android:textColor="@color/ch_black"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/ch_gift_center_hot_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/ch_gift_center_hot_item_btn"
+        android:layout_toRightOf="@id/ch_gift_center_hot_item_icon"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:text="100草花豆"
+        android:textColor="@color/ch_text_hint"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/ch_gift_center_hot_view_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ch_gift_center_hot_item_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/ch_gift_center_hot_item_btn"
+        android:layout_toRightOf="@id/ch_gift_center_hot_item_icon"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/ch_gift_center_hot_view_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:max="100"
+            android:minHeight="10dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:progress="30"
+            android:progressDrawable="@drawable/ch_game_gift_item_view_progress_bg" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/ch_gift_center_hot_view_progress_value"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="30%"-->
+        <!--android:textColor="@color/ch_vip_draw_btn_color" />-->
+    </LinearLayout>
+
+    <com.chsdk.ui.widget.RippleEffectButton
+        android:id="@+id/ch_gift_center_hot_item_btn"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ch_game_gift_recycler_item_title"
+        android:layout_centerVertical="true"
+        android:background="@drawable/download_button_shape_normal"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="领取"
+        android:textColor="@color/ch_white"
+        android:textSize="12sp" />
+
+</com.chsdk.ui.widget.RiffEffectRelativeLayout>

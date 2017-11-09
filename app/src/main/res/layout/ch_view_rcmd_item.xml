@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#43464f"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ch_view_rcmd_item_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ch_default_pic" />
+
+        <ImageView
+            android:id="@+id/ch_view_rcmd_item_icon"
+            android:layout_width="@dimen/ch_app_gift_icon_size"
+            android:layout_height="@dimen/ch_app_gift_icon_size"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-35dp"
+            android:src="@drawable/ch_default_apk_icon" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/ch_view_rcmd_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/ch_white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="简介"
+            android:textColor="@color/ch_text_hint" />
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ch_view_rcmd_bottom_corners">
+
+        <TextView
+            android:id="@+id/ch_view_rcmd_item_des"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ch_view_rcmd_item_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:text="我偶的就ajsd"
+            android:textColor="@color/ch_text_hint" />
+
+        <com.chsdk.ui.widget.RippleEffectButton
+            android:id="@+id/ch_view_rcmd_item_btn"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/ch_view_rcmd_item_date"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/download_button_shape_normal"
+            android:text="查  看"
+            android:textColor="@color/ch_white" />
+
+        <TextView
+            android:id="@+id/ch_view_rcmd_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/ch_white" />
+    </RelativeLayout>
+</merge>

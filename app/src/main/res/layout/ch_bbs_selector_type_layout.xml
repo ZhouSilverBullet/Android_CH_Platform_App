@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.chsdk.ui.widget.RippleEffectButton
+        android:id="@+id/ch_bbs_selector_type_text1"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/ch_bbs_selector_not_selector"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="全部"
+        android:textColor="@color/ch_white"
+        android:textSize="@dimen/ch_app_text_small_size" />
+
+    <com.chsdk.ui.widget.RippleEffectButton
+        android:id="@+id/ch_bbs_selector_type_text2"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/ch_bbs_selector_not_selector"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="精华"
+        android:textColor="@color/ch_black"
+        android:textSize="@dimen/ch_app_text_small_size" />
+
+    <com.chsdk.ui.widget.RippleEffectButton
+        android:id="@+id/ch_bbs_selector_type_text3"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/ch_bbs_selector_not_selector"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="置顶"
+        android:textColor="@color/ch_black"
+        android:textSize="@dimen/ch_app_text_small_size" />
+
+    <com.chsdk.ui.widget.RippleEffectButton
+        android:id="@+id/ch_bbs_selector_type_text4"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/ch_bbs_selector_not_selector"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="更多"
+        android:textColor="@color/ch_black"
+        android:textSize="@dimen/ch_app_text_small_size" />
+</merge>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ch_home_title_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.caohua.games.ui.widget.SubActivityTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sub_activity_title_des="VIP认证" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_black_alpha_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/ch_vip_certification_bg"
+                android:orientation="vertical">
+
+                <com.caohua.games.ui.vip.widget.VipCertificationEditView
+                    android:id="@+id/ch_activity_vip_certification_edit_view_qq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    app:editName="QQ号码："
+                    app:editValueHint="(必填)"
+                    app:isNumberInputType="true" />
+
+                <com.caohua.games.ui.vip.widget.VipCertificationEditView
+                    android:id="@+id/ch_activity_vip_certification_edit_view_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    app:editName="手机号："
+                    app:editValueHint="(必填)"
+                    app:isNumberInputType="true" />
+
+                <com.caohua.games.ui.vip.widget.VipCertificationEditView
+                    android:id="@+id/ch_activity_vip_certification_edit_view_verification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    app:editName="验证码："
+                    app:editValueHint="(必填)"
+                    app:showBtn="true" />
+
+                <com.caohua.games.ui.vip.widget.VipCertificationEditView
+                    android:id="@+id/ch_activity_vip_certification_edit_view_ic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    app:editName="身份证："
+                    app:editValueHint="" />
+
+                <com.caohua.games.ui.vip.widget.VipCertificationEditView
+                    android:id="@+id/ch_activity_vip_certification_edit_view_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    app:editName="姓名："
+                    app:editValueHint="" />
+
+                <com.caohua.games.ui.vip.widget.VipCertificationEditView
+                    android:id="@+id/ch_activity_vip_certification_edit_view_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    app:editName="地址："
+                    app:editValueHint=""
+                    app:isMultiText="true" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/ch_activity_vip_certification_submit"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ch_vip_pager_submit_btn_bg"
+                android:text="确认认证" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="认证有问题，请联系在线客服进行人工处理。"
+                android:textColor="@color/ch_text_hint" />
+
+            <TextView
+                android:id="@+id/ch_activity_vip_certification_kefu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="联系客服"
+                android:textColor="@color/ch_text_hint" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

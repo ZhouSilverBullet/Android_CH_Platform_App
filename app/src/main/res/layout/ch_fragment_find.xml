@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ch_transparent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ch_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ch_gray"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.find.FindItemView
+                android:id="@+id/ch_find_item_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="领券中心"
+                app:account_item_icon="@drawable/ch_find_coupon_center_icon"
+                app:find_item_describe="快来围观啦，优惠券大派送！" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.find.FindItemView
+                android:id="@+id/ch_find_item_hot_act"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="热门活动"
+                app:account_item_icon="@drawable/ch_find_hot_act_icon"
+                app:find_item_describe="活动里装的是什么奖励呢！" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.find.FindItemView
+                android:id="@+id/ch_find_item_gift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="礼包"
+                app:account_item_icon="@drawable/ch_find_gift_icon"
+                app:find_item_describe="领取礼包，赢在起跑线！" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.find.FindItemView
+                android:id="@+id/ch_find_item_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="商城"
+                app:account_item_icon="@drawable/ch_find_shop_icon"
+                app:find_item_describe="商品免费领啦，快去赚豆吧！" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.find.FindItemView
+                android:id="@+id/ch_find_item_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="任务"
+                app:account_item_icon="@drawable/ch_find_task_icon"
+                app:find_item_describe="做任务得奖励，币豆送不停！" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.find.FindItemView
+                android:id="@+id/ch_find_item_game_rank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="游戏排行"
+                app:account_item_icon="@drawable/ch_find_game_rank_icon"
+                app:find_item_describe="草花最新最热游戏请直戳进入！" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <!--<com.caohua.games.ui.find.FindItemView-->
+            <!--android:id="@+id/ch_find_item_open"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/ch_pressd_bg"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="10dp"-->
+            <!--android:paddingTop="10dp"-->
+            <!--app:account_item_des="开服表"-->
+            <!--app:account_item_icon="@drawable/ch_pay_icon"-->
+            <!--app:find_item_describe="这里是开服说明！" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@color/ch_gray" />-->
+            <com.caohua.games.ui.find.FindItemView
+                android:id="@+id/ch_find_item_forum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="论坛首页"
+                app:account_item_icon="@drawable/ch_find_game_forum_icon"
+                app:find_item_describe="分享勾搭趁现在！" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.find.FindItemView
+                android:id="@+id/ch_find_item_game_data_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone"
+                app:account_item_des="数据打通"
+                app:account_item_icon="@drawable/ch_find_game_forum_icon"
+                app:find_item_describe="分享勾搭趁现在！" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/ch_gray" />
+
+            <!--act-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+
+            <com.caohua.games.ui.find.FindItemView
+                android:id="@+id/ch_find_item_game_act"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ch_pressd_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:account_item_des="运营活动"
+                app:account_item_icon="@drawable/ch_find_game_forum_icon"
+                app:find_item_describe="分享勾搭趁现在！" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ch_gray" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/ch_activity_search_grid_item_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="2dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ch_default_apk_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ch_activity_search_grid_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ch_shape_search_lines"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:text="战争指挥官"
+        android:textColor="@color/ch_common_bg"
+        android:textSize="12sp" />
+</merge>

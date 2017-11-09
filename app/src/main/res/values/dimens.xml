@@ -1,0 +1,25 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="ch_home_spacking">10dp</dimen>
+
+    <dimen name="ch_app_icon_size">54dp</dimen>
+    <dimen name="ch_app_gift_icon_size">70dp</dimen>
+    <dimen name="ch_app_text_size">16sp</dimen>
+    <dimen name="ch_app_download_button_size">54dp</dimen>
+    <dimen name="ch_app_download_button_height_size">23dp</dimen>
+    <dimen name="ch_app_download_ll_margin_top">8dp</dimen>
+    <dimen name="ch_app_text_small_size">12sp</dimen>
+    <dimen name="ch_refresh_header_text_size">5sp</dimen>
+    <dimen name="ch_refresh_header_text_size_1">6sp</dimen>
+
+    <dimen name="ch_pop_spacking">20dp</dimen>
+    <dimen name="ch_pop_x">-50dp</dimen>
+    <dimen name="ch_pop_y">3dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="textSize_sidebar">10sp</dimen>
+    <dimen name="large_textSize_sidebar">32sp</dimen>
+    <dimen name="textSize_sidebar_choose">12sp</dimen>
+    <dimen name="textSize_sidebar_padding">20sp</dimen>
+    <dimen name="radius_sidebar">20dp</dimen>
+    <dimen name="ball_radius_sidebar">24dp</dimen>
+</resources>
