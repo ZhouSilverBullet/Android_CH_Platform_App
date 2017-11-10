@@ -68,18 +68,18 @@ public abstract class SearchSuperFragment<T extends BaseEntry> extends NormalFra
 
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
-                loadData(true,false);
+                loadData(true, false);
             }
         });
         if (isFragmentVisible && isFirst) {
 //            refreshLayout.autoRefresh();
-            loadData(true,true);
+            loadData(true, true);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if (getActivity() != null) {
+        if (getActivity() != null && getActivity() instanceof SearchActivity) {
             gameName = ((SearchActivity) getActivity()).getGameName();
         }
         return super.onCreateView(inflater, container, savedInstanceState);
@@ -90,7 +90,7 @@ public abstract class SearchSuperFragment<T extends BaseEntry> extends NormalFra
         super.onActivityCreated(savedInstanceState);
         if (getActivity() != null && !isFirst) {
 //            refreshLayout.autoRefresh();
-            loadData(true,true);
+            loadData(true, true);
         }
     }
 
@@ -114,7 +114,7 @@ public abstract class SearchSuperFragment<T extends BaseEntry> extends NormalFra
                 @Override
                 public void onClick(View v) {
                     noNetworkView.setVisibility(View.GONE);
-                    loadData(true,true);
+                    loadData(true, true);
                 }
             });
         } else {

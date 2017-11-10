@@ -10,30 +10,35 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" />
 
-    <com.caohua.games.ui.prefecture.PrefectureListTabView
-        android:id="@+id/ch_activity_prefecture_list_tab_view"
+    <LinearLayout
+        android:id="@+id/ch_activity_prefecture_list_tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ch_activity_prefecture_list_title_view" />
+        android:layout_below="@id/ch_activity_prefecture_list_title_view"
+        android:orientation="vertical">
 
-    <com.caohua.games.ui.widget.BottomLoadListView
-        android:id="@+id/ch_activity_prefecture_list_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/ch_activity_prefecture_list_tab_view"
-        android:background="@color/ch_gray"
-        android:cacheColorHint="#00000000"
-        android:divider="@null"
-        android:dividerHeight="1dp"
-        android:fadingEdge="none"
-        android:fadingEdgeLength="0dp"
-        android:scrollbars="none" />
+        <com.culiu.mhvp.core.tabs.com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/ch_activity_prefecture_list_tab"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:pstsIndicatorColor="@color/ch_green" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/ch_gray" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/ch_activity_prefecture_list_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
     <com.caohua.games.ui.widget.EmptyView
         android:id="@+id/ch_activity_prefecture_list_empty_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/ch_activity_prefecture_list_tab_view"
+        android:layout_below="@id/ch_activity_prefecture_list_title_view"
         android:visibility="gone"
         app:empty_des="暂无数据" />
 
@@ -41,12 +46,12 @@
         android:id="@+id/ch_activity_prefecture_list_no_network"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/ch_activity_prefecture_list_tab_view" />
+        android:layout_below="@id/ch_activity_prefecture_list_title_view" />
 
     <com.caohua.games.ui.widget.CHTwoBallView
         android:id="@+id/ch_activity_prefecture_list_two_ball"
-        android:layout_below="@id/ch_activity_prefecture_list_tab_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/ch_activity_prefecture_list_title_view" />
 
 </RelativeLayout>

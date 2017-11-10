@@ -1,7 +1,14 @@
 package com.caohua.games.ui.prefecture;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -20,7 +27,10 @@ import com.caohua.games.ui.widget.NoNetworkView;
 import com.caohua.games.ui.widget.SubActivityTitleView;
 import com.chsdk.ui.WebActivity;
 import com.chsdk.ui.widget.CHToast;
+import com.chsdk.utils.LogUtil;
 import com.chsdk.utils.PicUtil;
+import com.chsdk.utils.ViewUtil;
+import com.culiu.mhvp.core.tabs.com.astuetz.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -32,16 +42,19 @@ import java.util.List;
 
 public class PrefectureListActivity extends BaseActivity {
     private SubActivityTitleView titleView;
-    private BottomLoadListView bottomListView;
     private int listId;
     private String titleName;
     private ListAdapter adapter;
     private EmptyView empty;
-    private PrefectureListTabView tabView;
+    //    private PrefectureListTabView tabView;
     private PrefectureListActivity activity;
     private String classifyId = "0";
     private NoNetworkView noNetworkView;
     private View twoBallView;
+    private PagerSlidingTabStrip tab;
+    private String[] searchTitleTab = {"文章", "帖子", "游戏"};
+    private ViewPager pager;
+    private List<PrefectureListEntry.ClassifyBean> classify;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,15 +72,15 @@ public class PrefectureListActivity extends BaseActivity {
     }
 
     private void initData() {
-        logic(0, classifyId, false);
+        logic(0, classifyId);
     }
 
     private void showTwoBallView(boolean isShow) {
         twoBallView.setVisibility(isShow ? View.VISIBLE : View.GONE);
     }
 
-    private void logic(int number, String classifyId, boolean isTab) {
-        if (number == 0 && !isTab) {
+    private void logic(int number, final String classifyId) {
+        if (number == 0) {
             showTwoBallView(true);
         }
         final PrefectureListLogic logic = new PrefectureListLogic(number, listId);
@@ -83,7 +96,6 @@ public class PrefectureListActivity extends BaseActivity {
                     }
                     return;
                 }
-                showEmpty();
             }
 
             @Override
@@ -96,36 +108,22 @@ public class PrefectureListActivity extends BaseActivity {
                 if (entryResult instanceof PrefectureListEntry) {
                     PrefectureListEntry entry = (PrefectureListEntry) entryResult;
                     List<PrefectureListEntry.ContentBean> beanList = entry.getContent();
-                    final List<PrefectureListEntry.ClassifyBean> classify = entry.getClassify();
-                    if (!tabView.hasData() && classify != null && classify.size() > 0) {
-                        tabView.setData(classify, new PrefectureListTabView.PrefectureTabListener() {
-                            @Override
-                            public void tabListener(String classifyId) {
-                                if (!TextUtils.isEmpty(classifyId) && !classifyId.equals(PrefectureListActivity.this.classifyId)) {
-                                    PrefectureListActivity.this.classifyId = classifyId;
-                                    logic(0, classifyId, true);
-                                }
-                            }
-                        });
-                        tabView.setOneColor();
+                    if (classify == null) {
+                        classify = entry.getClassify();
+                        PrefectureListEntry.ClassifyBean bean = new PrefectureListEntry.ClassifyBean();
+                        bean.setClassify_id("0");
+                        bean.setClassify_name("全部");
+                        classify.add(0, bean);
+                        List<String> list = new ArrayList<String>();
+                        for (PrefectureListEntry.ClassifyBean classifyBean : classify) {
+                            list.add(classifyBean.getClassify_name());
+                        }
+                        pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(), classify, list));
+                        tab.setViewPager(pager);
+                        pager.setOffscreenPageLimit(classify.size());
+                        setTabStrip(tab);
                     }
-                    if (currentPage == 0) {
-                        adapter.clear();
-                    }
-                    adapter.addAll(beanList);
-                    boolean enable = beanList.size() == 0;
-                    if (enable) {
-                        bottomListView.setLoadMoreUnable(true);
-                        bottomListView.loadComplete(true);
-                    } else {
-                        bottomListView.setLoadMoreUnable(false);
-                        bottomListView.loadComplete(false);
-                    }
-                } else if (entryResult == null) {
-                    bottomListView.setLoadMoreUnable(true);
-                    bottomListView.loadComplete(true);
                 }
-                showEmpty();
             }
         });
     }
@@ -137,7 +135,7 @@ public class PrefectureListActivity extends BaseActivity {
                 @Override
                 public void onClick(View v) {
                     noNetworkView.setVisibility(View.GONE);
-                    logic(0, classifyId, false);
+                    logic(0, classifyId);
                 }
             });
         } else {
@@ -154,7 +152,7 @@ public class PrefectureListActivity extends BaseActivity {
             empty.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    logic(0, classifyId, false);
+                    logic(0, classifyId);
                 }
             });
         }
@@ -162,19 +160,65 @@ public class PrefectureListActivity extends BaseActivity {
 
     private void initView() {
         titleView = getView(R.id.ch_activity_prefecture_list_title_view);
-        bottomListView = getView(R.id.ch_activity_prefecture_list_list);
         titleView.setTitle(titleName);
         adapter = new ListAdapter(new ArrayList<PrefectureListEntry.ContentBean>());
-        bottomListView.setAdapter(adapter);
-        bottomListView.setOnLoadListener(new BottomLoadListView.OnLoadListener() {
-            @Override
-            public void onLoad() {
-                logic(adapter.getCount(), classifyId, false);
-            }
-        });
-        tabView = (PrefectureListTabView) findViewById(R.id.ch_activity_prefecture_list_tab_view);
         noNetworkView = getView(R.id.ch_activity_prefecture_list_no_network);
         twoBallView = getView(R.id.ch_activity_prefecture_list_two_ball);
+        tab = getView(R.id.ch_activity_prefecture_list_tab);
+        pager = getView(R.id.ch_activity_prefecture_list_pager);
+        setTabStrip(tab);
+    }
+
+    private PagerSlidingTabStrip setTabStrip(PagerSlidingTabStrip pagerSlidingTabStrip) {
+        pagerSlidingTabStrip.setTabPaddingLeftRight(ViewUtil.dp2px(this, 15));
+        pagerSlidingTabStrip.setTextColor(Color.BLACK);
+        pagerSlidingTabStrip.setMatchExpand(true);
+        pagerSlidingTabStrip.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 15, getResources().getDisplayMetrics()));
+        pagerSlidingTabStrip.setTypeface(null, Typeface.NORMAL);
+        pagerSlidingTabStrip.setIndicatorHeight(ViewUtil.dp2px(this, 2));
+        pagerSlidingTabStrip.setIndicatorColor(getResources().getColor(com.culiu.mhvp.core.R.color.ch_green_1));
+        pagerSlidingTabStrip.setBackgroundColor(Color.WHITE);
+        return pagerSlidingTabStrip;
+    }
+
+    private class MyPagerAdapter extends FragmentPagerAdapter {
+        private List<PrefectureListEntry.ClassifyBean> list;
+        private List<String> titleTab;
+        private FragmentManager fm;
+
+        public MyPagerAdapter(FragmentManager fm, List<PrefectureListEntry.ClassifyBean> list, List<String> titleTab) {
+            super(fm);
+            this.fm = fm;
+            this.list = list;
+            this.titleTab = titleTab;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return PrefectureListFragment.newInstance(list.get(position).getClassify_id(), listId);
+        }
+
+        @Override
+        public int getCount() {
+            return titleTab == null ? 0 : titleTab.size();
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            return super.instantiateItem(container, position);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            LogUtil.errorLog("position :" + titleTab.get(position));
+            return titleTab.get(position);
+        }
+
+        @Override
+        public void setPrimaryItem(ViewGroup container, int position, Object object) {
+            super.setPrimaryItem(container, position, object);
+            LogUtil.errorLog("searchFragment setPrimaryItem:");
+        }
     }
 
     class ListAdapter extends BaseAdapter {
